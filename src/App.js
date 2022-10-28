@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import {useState} from 'react';
+import {BrowserRouter as Router,Routes, Route} from 'react-router-dom';
+import Game from './pages/Game/Game.js';
+import HomePage from './pages/HomePage/HomePage';
 
 function App() {
+  const [startGame, setStartGame] = useState(false);
+
+  const startHandler = (event)=>{
+    event.preventDefault();
+    setStartGame(true);
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {startGame ?  <Game/>:<HomePage startHandler={startHandler}/>}
     </div>
   );
 }
