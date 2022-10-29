@@ -9,8 +9,10 @@ const Room = () => {
         <section className='room'>
             <p>Resting</p>
             <Bed imgSrc={sleepcat} alt='sleeping cat' nameClass='cat room__sleepingcat'/>
-            <Bed imgSrc={boxcat} alt='cat in a box' nameClass='cat room__cat-in-box'/>
             <Bed/>
+            <div className='bathroom'>
+                <img src={boxcat} alt='cat in a box' className='cat room__cat-in-box'/>
+            </div>
 
         </section>
     )
