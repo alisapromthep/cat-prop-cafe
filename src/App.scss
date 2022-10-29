@@ -1,0 +1,14 @@
+@use './styles/partial/typography' as *;
+
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.cat{
+    height: 4rem;
+    position: relative;
+}

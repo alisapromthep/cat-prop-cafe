@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-const Bed = () => {
+const Bed = ({imgSrc, alt, nameClass}) => {
     return (
-        <div>Bed</div>
+        <div className='bed'>
+            <img src={imgSrc} alt={alt} className={nameClass}/>
+        </div>
     )
 }
 
-export default Bed
+export default Bed;

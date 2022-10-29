@@ -1,0 +1,7 @@
+@use '../../styles/partial/mixins' as *;
+
+.flowchart{
+    @include desktop{
+        width: 25rem;
+    }
+}

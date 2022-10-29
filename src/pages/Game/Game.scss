@@ -1,0 +1,43 @@
+@use '../../styles/partial/mixins' as *;
+@use '../../styles/partial/typography' as *;
+
+.game{
+    display: flex;
+    flex-direction: column;
+
+    @include desktop{
+        flex-direction: row;
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__cafe-name{
+        text-align: center;
+        color: #d0c4df;
+        height: 100%;
+        margin: 0;
+        padding: 1rem 0;
+        font-family: 'Pacifico', 'sans-serif';
+        font-size: 4rem;
+    }
+}
+
+.cafe{
+    flex-grow: 2;
+    border: 1px solid black;
+    border-top:10px solid #d6eaff;
+    height: 50vh;
+
+    &__inside-room{
+        display: flex;
+        height: 50%;
+    }
+
+    &__hallway{
+        background-color: #ded6ce;
+        width: 10%;
+    }
+}
