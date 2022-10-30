@@ -1,0 +1,39 @@
+[
+    {
+        "id":"0",
+        "name":"lobby",
+        "function":"const lobby = () => {\nreturn (\n<div>\n<RoomOne cat={catName}/>\n<RoomTwo cat={catName}/>\n</div>\n)\n}\nexport default lobby;"
+    },
+    {
+        "id":"1",
+        "name":"roomOne",
+        "function":"const roomOne = () => {\nreturn (\n<div>\n<bedroomOne cat={catName}/>\n<bedroomTwo cat={catName}/>\n</div>\n)\n}\nexport default roomOne;"
+    },
+    {
+        "id":"2",
+        "name":"roomTwo",
+        "function":"const roomTwo = () => {\nreturn (\n<div>\n<DiningTable cat={catName}/>\n</div>\n)\n}\nexport default roomTwo;"
+    },
+    {
+        "id":"3",
+        "name":"bedroomOne",
+        "function":"const bedroomOne = () => {\nreturn (\n<div className='bed'>\n<img cat={catName}/>\n</div>\n)\n}\nexport default bedroomOne;"
+    },
+    {
+        "id":"4",
+        "name":"bedroomTwo",
+        "function":"const bedroomTwo = () => {\nreturn (\n<div className='bed'>\n<img cat={catName}/>\n</div>\n)\n}\nexport default bedroomTwo;"
+    },
+    {
+        "id":"5",
+        "name":"bathroom",
+        "function":"const bathroom = () => {\nreturn (\n<div className='bathroom'>\n<img cat={catName}/>\n</div>\n)\n}\nexport default bathroom;"
+    },
+    {
+        "id":"6",
+        "name":"diningTable",
+        "function":"const roomOne = ({cat}) => {\nreturn (\n<div>\n<div className='table' cat={catName}>\n<img src={cat}/>\n</div>\n)\n}\nexport default diningTable;"
+    }
+
+
+]

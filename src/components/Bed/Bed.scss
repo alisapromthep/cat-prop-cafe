@@ -1,0 +1,9 @@
+@use '../../styles/partial/mixins' as *;
+
+.bed{
+    background-color: #F0D7DF;
+    width: 6rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 4px solid #CC7893;
+}

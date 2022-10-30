@@ -1,4 +1,5 @@
 import React from 'react';
+import './Bed.scss';
 
 const Bed = ({imgSrc, alt, nameClass}) => {
     return (

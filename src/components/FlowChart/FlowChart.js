@@ -1,46 +1,55 @@
-import React from 'react';import './FlowChart.scss';
+import React, { useMemo } from 'react';import './FlowChart.scss';
 import ReactFlow, {Background, Controls} from 'reactflow';
 import 'reactflow/dist/style.css';
+import ButtonNode from './ButtonNode';
 
+const FlowChart = ({displayCode}) => {
 
-const FlowChart = () => {
+    const nodeTypes = useMemo(()=>({button: ButtonNode}),[])
+
 
     const nodes = [
         {
             id: '0',
-            data: { label: 'Lobby' },
-            position: { x: 50, y: -120 },
-            type: 'input',
+            data: { label: 'Lobby', level:'parent', displayCode:displayCode },
+            position: { x: 50, y: -140 },
+            type: 'button',
             },
             {
             id: '1',
-            data: { label: 'Room 1' },
-            position: { x: 200, y: -20 },
+            data: { label: 'Room 1',level:'child', displayCode:displayCode },
+            position: { x: -50, y: -20 },
+            type: 'button'
             },
             {
             id: '2',
-            data: { label: 'Room 2' },
-            position: { x: -100, y: -20 },
+            data: { label: 'Room 2',level:'child', displayCode:displayCode },
+            position: { x:  200, y: -20 },
+            type: 'button'
             },
             {
             id: '3',
-            data: { label: 'bedroom 1' },
-            position: { x: 100, y: 80 },
+            data: { label: 'bedroom 1',level:'grandchild', displayCode:displayCode },
+            position: { x: -110, y: 80 },
+            type: 'button'
             },
             {
             id: '4',
-            data: { label: 'bedroom 2' },
-            position: { x: 300, y: 80 },
+            data: { label: 'bedroom 2',level:'grandchild', displayCode:displayCode },
+            position: { x: 10, y: 80 },
+            type: 'button'
             },
             {
             id: '5',
-            data: { label: 'bathroom' },
-            position: { x: 300, y: 150 },
+            data: { label: 'bathroom',level:'great-grandchild', displayCode:displayCode },
+            position: { x: 10, y: 150 },
+            type: 'button'
             },
             {
             id: '6',
-            data: { label: 'dining table' },
-            position: { x: -100, y: 40 },
+            data: { label: 'dining table',level:'grandchild', displayCode:displayCode },
+            position: { x: 200, y: 40 },
+            type: 'button'
             },
         ];
 
@@ -55,7 +64,12 @@ const FlowChart = () => {
 
     return (
         <div className='flowchart'>
-            <ReactFlow nodes={nodes} edges={connection}>
+            <ReactFlow nodes={nodes} edges={connection}
+            nodeTypes={nodeTypes}
+            panOnDrag={false}
+            panOnScrollMode={'vertical'}
+            zoomOnScroll={false}
+            >
                 <Background/>
                 <Controls/>
             </ReactFlow>

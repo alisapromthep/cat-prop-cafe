@@ -4,24 +4,27 @@
 .game{
     display: flex;
     flex-direction: column;
-
-    @include desktop{
-        flex-direction: row;
-    }
+    align-items: center;
 
     &__container{
         display: flex;
         flex-direction: column;
+        margin: 0 1rem;
     }
 
     &__cafe-name{
         text-align: center;
-        color: #d0c4df;
+        color: #F0D7DF;
         height: 100%;
         margin: 0;
         padding: 1rem 0;
         font-family: 'Pacifico', 'sans-serif';
         font-size: 4rem;
+    }
+
+    &__control{
+        display: flex;
+        width: 100%;
     }
 }
 
@@ -29,7 +32,8 @@
     flex-grow: 2;
     border: 1px solid black;
     border-top:10px solid #d6eaff;
-    height: 50vh;
+    height: 60vh;
+    width: 80vw;
 
     &__inside-room{
         display: flex;
