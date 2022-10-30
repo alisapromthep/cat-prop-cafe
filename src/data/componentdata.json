@@ -2,37 +2,60 @@
     {
         "id":"0",
         "name":"lobby",
-        "function":"const lobby = () => {\nreturn (\n<div>\n<RoomOne cat={catName}/>\n<RoomTwo cat={catName}/>\n</div>\n)\n}\nexport default lobby;"
+        "import":"import catFood from '../../petintelligent/food.png\nimport stretchyCat from '../../momcatbelly/stretchycat.png'\nimport greyCat from '../../momcatbelly/greycat.png'\nimport sleepingCat from '../../momcatbelly/sleepingcat.png",
+        "before":"const Lobby = () => {\nreturn (\n<div> ",
+        "components":"<RoomOne cat={catName}/>\n<RoomTwo cat={catName}/>\n",
+        "after":"</div>\n)\n}",
+        "export":"export default Lobby;"
     },
     {
         "id":"1",
         "name":"roomOne",
-        "function":"const roomOne = () => {\nreturn (\n<div>\n<bedroomOne cat={catName}/>\n<bedroomTwo cat={catName}/>\n</div>\n)\n}\nexport default roomOne;"
+        "before":"const RoomOne = ({cat}) => {\nreturn (\n<div>",
+        "components":"<bedroomOne cat={catName}/>\n<bedroomTwo cat={catName}/>",
+        "after":"</div>\n)\n}",
+        "export":"export default RoomOne;"
     },
     {
         "id":"2",
         "name":"roomTwo",
-        "function":"const roomTwo = () => {\nreturn (\n<div>\n<DiningTable cat={catName}/>\n</div>\n)\n}\nexport default roomTwo;"
+        "import":"import laptopCat from'../../momcatbelly/laptopcat.png'",
+        "before":"const RoomTwo = ({cat}) => {\nreturn (\n<div>",
+        "components":"<DiningTable cat={catName}/>",
+        "after":"</div>\n)\n}",
+        "export":"export default RoomTwo;"
     },
     {
         "id":"3",
         "name":"bedroomOne",
-        "function":"const bedroomOne = () => {\nreturn (\n<div className='bed'>\n<img cat={catName}/>\n</div>\n)\n}\nexport default bedroomOne;"
+        "before":"const BedroomOne = ({cat}) => {\nreturn (\n<div className='bed'",
+        "components":"<img cat={catName}/>",
+        "after":"</div>\n)\n}",
+        "export":"export default BedroomOne;"
     },
     {
         "id":"4",
         "name":"bedroomTwo",
-        "function":"const bedroomTwo = () => {\nreturn (\n<div className='bed'>\n<img cat={catName}/>\n</div>\n)\n}\nexport default bedroomTwo;"
+        "before":"const BedroomTwo = ({cat}) => {\nreturn (\n<div className='bed'>",
+        "components":"<img cat={catName}/>\n<Bathroom cat={catName}/>",
+        "after":"</div>\n)\n}",
+        "export":"export default BedroomTwo;"
     },
     {
         "id":"5",
-        "name":"bathroom",
-        "function":"const bathroom = () => {\nreturn (\n<div className='bathroom'>\n<img cat={catName}/>\n</div>\n)\n}\nexport default bathroom;"
+        "name":"sandbox",
+        "before":"const Sandbox = ({cat}) => {\nreturn (\n<div className='bathroom'>}",
+        "components":"<img cat={catName}/>",
+        "after":"</div>\n)\n}",
+        "export":"export default Sandbox;"
     },
     {
         "id":"6",
-        "name":"diningTable",
-        "function":"const roomOne = ({cat}) => {\nreturn (\n<div>\n<div className='table' cat={catName}>\n<img src={cat}/>\n</div>\n)\n}\nexport default diningTable;"
+        "name":"DiningTable",
+        "before":"const DiningTable = ({cat}) => {\nreturn (\n<div>\n<div className='table' cat={catName}>}",
+        "components":"<img src={cat}/>",
+        "after":"</div>\n)\n}",
+        "export":"export default DiningTable;"
     }
 
 

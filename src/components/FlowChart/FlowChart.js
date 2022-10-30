@@ -29,25 +29,25 @@ const FlowChart = ({displayCode}) => {
             },
             {
             id: '3',
-            data: { label: 'bedroom 1',level:'grandchild', displayCode:displayCode },
+            data: { label: 'bedroomOne',level:'grandchild', displayCode:displayCode },
             position: { x: -110, y: 80 },
             type: 'button'
             },
             {
             id: '4',
-            data: { label: 'bedroom 2',level:'grandchild', displayCode:displayCode },
+            data: { label: 'bedroomTwo',level:'grandchild', displayCode:displayCode },
             position: { x: 10, y: 80 },
             type: 'button'
             },
             {
             id: '5',
-            data: { label: 'bathroom',level:'great-grandchild', displayCode:displayCode },
+            data: { label: 'sandbox',level:'great-grandchild', displayCode:displayCode },
             position: { x: 10, y: 150 },
             type: 'button'
             },
             {
             id: '6',
-            data: { label: 'dining table',level:'grandchild', displayCode:displayCode },
+            data: { label: 'diningTable',level:'grandchild', displayCode:displayCode },
             position: { x: 200, y: 40 },
             type: 'button'
             },

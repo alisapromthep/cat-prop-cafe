@@ -1,10 +1,10 @@
 import React from 'react';
 import './Lobby.scss';
-import laptopcat from '../../assets/icons/laptopcat.png';
 import readingcat from '../../assets/icons/readingcat.png';
 import greycat from '../../assets/icons/greycat.png';
 import catfood from '../../assets/icons/cat-food.png';
 import stretchcat from '../../assets/icons/stretchcat.png';
+import sleepcat from '../../assets/icons/sleepcat.png';
 
 const Lobby = () => {
     const cats = [
@@ -12,11 +12,6 @@ const Lobby = () => {
             src: catfood,
             class: 'lobby__catfood',
             description:'bag of catfood'
-        },
-        {
-            src: laptopcat,
-            class: 'lobby__laptop-cat',
-            description:'a cat using a laptop'
         },
         {
             src: readingcat,
@@ -32,6 +27,11 @@ const Lobby = () => {
             src:stretchcat,
             class: 'lobby__stretchcat',
             describe: 'a grey cat stretching'
+        },
+        {
+            src:sleepcat,
+            class: 'lobby__sleepcat',
+            describe: 'a cat sleeping'
         }
 
     ]
