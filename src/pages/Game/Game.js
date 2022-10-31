@@ -12,10 +12,13 @@ const Game = () => {
 
     const [code, setCode] = useState(`Select the component from the flowchart`);
 
+    const [componentId, setComponentId] = useState(null)
+
     const [taskNum, setTaskNum] = useState(0);
 
     const displayCode = (id)=>{
         let selectRoom = componentData[id]
+        setComponentId(id);
         setCode(selectRoom);
     };
 
@@ -35,9 +38,10 @@ const Game = () => {
                 <div className='game__instruction'>
                     <h3>React Props</h3>
                     <p>Prop is package/message that can get pass from one component to another. It helps connect and allows one component to communicate with another. The catch is that prop can only be pass down from the parent component to their children.</p>
-                    <h3>Help the kitties....</h3>
-                    <p>{`${tasks[taskNum].description}`}</p>
-                    <Console code={code}/>
+                    <h3>Help the kitties....<span>{`${tasks[taskNum].description}`}</span></h3>
+                    <Console code={code}
+                    componentId={componentId}
+                    />
                 </div>
                 <FlowChart displayCode={displayCode}/>
             </div>

@@ -15,4 +15,13 @@ pre{
 .cat{
     height: 4rem;
     position: relative;
+
+    &__hide {
+        visibility: hidden;
+    }
+
+    &__appear{
+        visibility: visible;
+    }
 }
+

@@ -2,21 +2,25 @@
     background-color: #D2ECED;
     height: 100%;
     width: 100%;
-    position: relative;
+    display: flex;
+    justify-content: flex-end;
 
     &__container{
         display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
     }
 
     &__bedroom{
-        width: 30%;
+        width: 100%;
         background-color:#C8C7D6;
         position: relative;
         border: 2px solid #A07554;
-        margin: 0 2rem;
+        margin-left: 2rem;
+        padding: 1rem;
     }
 
-    &__bathroom{
+    &__sandbox{
         background-color: #f5ebe0;
         width: 6rem;
         height: 6rem;

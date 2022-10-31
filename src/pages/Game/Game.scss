@@ -33,11 +33,10 @@
 }
 
 .cafe{
-    flex-grow: 2;
     border: 1px solid black;
     border-top:10px solid #d6eaff;
-    height: 60vh;
-    width: 80vw;
+    height: 35rem;
+    width: 50rem;
 
     &__inside-room{
         display: flex;

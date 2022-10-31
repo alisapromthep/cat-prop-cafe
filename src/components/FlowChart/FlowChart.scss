@@ -1,9 +1,7 @@
 @use '../../styles/partial/mixins' as *;
 
 .flowchart{
-    border: 2px solid red;
     width: 50%;
-    height: 25rem;
     @include desktop{
         width: 30rem;
     }

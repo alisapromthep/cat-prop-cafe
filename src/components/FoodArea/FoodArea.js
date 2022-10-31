@@ -3,8 +3,10 @@ import './FoodArea.scss';
 import orangecat from '../../assets/icons/orangecat.png';
 import eatcat from '../../assets/icons/eatcat.png';
 import laptopcat from '../../assets/icons/laptopcat.png';
+import catfood from '../../assets/icons/cat-food.png';
 
 const FoodArea = () => {
+
 
     const Foodcats = [
         {
@@ -21,7 +23,12 @@ const FoodArea = () => {
             src: laptopcat,
             class: 'foodarea__laptopcat',
             description:'cat using a laptop'
-        }
+        },
+        {
+            src: catfood,
+            class: '',
+            description:'a bag of cat food'
+        },
     ];
     return (
         <div className='foodarea'>

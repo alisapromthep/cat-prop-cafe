@@ -4,7 +4,7 @@
         "name":"lobby",
         "import":"import catFood from '../../petintelligent/food.png\nimport stretchyCat from '../../momcatbelly/stretchycat.png'\nimport greyCat from '../../momcatbelly/greycat.png'\nimport sleepingCat from '../../momcatbelly/sleepingcat.png",
         "before":"const Lobby = () => {\nreturn (\n<div> ",
-        "components":"<RoomOne cat={catName}/>\n<RoomTwo cat={catName}/>\n",
+        "components":["<RoomOne cat=","<RoomTwo cat="],
         "after":"</div>\n)\n}",
         "export":"export default Lobby;"
     },
@@ -12,7 +12,7 @@
         "id":"1",
         "name":"roomOne",
         "before":"const RoomOne = ({cat}) => {\nreturn (\n<div>",
-        "components":"<bedroomOne cat={catName}/>\n<bedroomTwo cat={catName}/>",
+        "components":["<bedroomOne cat=","<bedroomTwo cat="],
         "after":"</div>\n)\n}",
         "export":"export default RoomOne;"
     },
@@ -21,7 +21,7 @@
         "name":"roomTwo",
         "import":"import laptopCat from'../../momcatbelly/laptopcat.png'",
         "before":"const RoomTwo = ({cat}) => {\nreturn (\n<div>",
-        "components":"<DiningTable cat={catName}/>",
+        "components":["<DiningTable cat=","<img src={laptopCat} onClick="],
         "after":"</div>\n)\n}",
         "export":"export default RoomTwo;"
     },
@@ -29,7 +29,7 @@
         "id":"3",
         "name":"bedroomOne",
         "before":"const BedroomOne = ({cat}) => {\nreturn (\n<div className='bed'",
-        "components":"<img cat={catName}/>",
+        "components":["<img cat={catName}"],
         "after":"</div>\n)\n}",
         "export":"export default BedroomOne;"
     },
@@ -37,7 +37,7 @@
         "id":"4",
         "name":"bedroomTwo",
         "before":"const BedroomTwo = ({cat}) => {\nreturn (\n<div className='bed'>",
-        "components":"<img cat={catName}/>\n<Bathroom cat={catName}/>",
+        "components":["<img cat={catName}","<Bathroom cat="],
         "after":"</div>\n)\n}",
         "export":"export default BedroomTwo;"
     },
@@ -45,7 +45,7 @@
         "id":"5",
         "name":"sandbox",
         "before":"const Sandbox = ({cat}) => {\nreturn (\n<div className='bathroom'>}",
-        "components":"<img cat={catName}/>",
+        "components":["<img cat="],
         "after":"</div>\n)\n}",
         "export":"export default Sandbox;"
     },
@@ -53,7 +53,7 @@
         "id":"6",
         "name":"DiningTable",
         "before":"const DiningTable = ({cat}) => {\nreturn (\n<div>\n<div className='table' cat={catName}>}",
-        "components":"<img src={cat}/>",
+        "components":["<img src="],
         "after":"</div>\n)\n}",
         "export":"export default DiningTable;"
     }

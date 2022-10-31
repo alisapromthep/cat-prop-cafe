@@ -2,13 +2,13 @@ import React, { useEffect } from 'react';
 import './Console.scss';
 
 
-const Console = ({code}) => {
-
+const Console = ({code,componentId}) => {
 
     const lineNum = [];
     for (let i = 1; i<=20; i++){
         lineNum.push(i);
     }
+    const roomComponents = code.components;
 
     return (
         <div className='console'>
@@ -17,15 +17,23 @@ const Console = ({code}) => {
                     return <p key={i} >{num}</p>
                 })}
             </div>
-            <div>
+            <div className='console__code'>
                 <pre className='code__import'>{code.import}</pre>
                 <pre>{code.before}</pre>
-                <textarea className='code__component'
-                defaultValue={code.components}
-                >
-                </textarea>
-                <pre>{code.after}</pre>
-                <pre>{code.export}</pre>
+                {componentId ? 
+                <form className='code__input'>
+                    {roomComponents.map((comp,i)=> {
+                        return <label key={i}>
+                            {comp} <input type='text'/>
+                            {`/>`}
+                        </label>
+                    })}
+                    <pre>{code.after}</pre>
+                    <pre>{code.export}</pre>
+                    <button className='code__button'>next</button>
+                </form>
+                : <p>{code}</p>
+                }
             </div>
 
         </div>
