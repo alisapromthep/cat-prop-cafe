@@ -38,8 +38,8 @@ const Lobby = () => {
     return (
         <section className='lobby'>
             Lobby
-            <div>
-                <p>Message from laptopCat: 'meow hungry! Send food'</p>
+            <div className='lobby__monitor'>
+                <p><span className='lobby__msg--bold'>LaptopCat (say)</span> "meow hungry! Send food"</p>
             </div>
             {cats.map(((cat,i)=>{
                 return <img key={i} src={cat.src} className={`${cat.class} cat`} alt={cat.description}/>

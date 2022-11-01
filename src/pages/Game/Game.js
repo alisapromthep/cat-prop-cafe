@@ -8,6 +8,7 @@ import FlowChart from '../../components/FlowChart/FlowChart';
 import componentData from '../../data/componentdata.json';
 import tasks from '../../data/tasks.json';
 
+
 const Game = () => {
 
     const [code, setCode] = useState(`Select the component from the flowchart`);

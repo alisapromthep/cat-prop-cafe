@@ -26,17 +26,18 @@ const FoodArea = () => {
         },
         {
             src: catfood,
-            class: '',
+            class: 'foodarea__catfood',
             description:'a bag of cat food'
         },
     ];
     return (
         <div className='foodarea'>
             <p>RoomTwo</p>
+            <div className='foodarea__table'></div>
+            
             {Foodcats.map((cat,i)=>{
                 return <img key={i} src={cat.src} alt={cat.description} className={`cat ${cat.class}`}/>
             })}
-
         </div>
     )
 }

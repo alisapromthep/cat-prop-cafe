@@ -1,5 +1,39 @@
 .foodarea{
-    background-color: #D2ECED;
+    background: linear-gradient(135deg, rgba(160,117,84,1) 15%, rgba(210,236,237,1) 15%);
     height:100%;
     width: 100%;
+    position: relative;
+
+    &__table{
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+        background-color: #B99579;
+        position: absolute;
+        top:5rem;
+        left: 7rem;
+    }
+
+    &__laptopcat{
+        position: absolute;
+        top:7rem;
+        left:4rem;
+    }
+
+    &__eatcat{
+        position: absolute;
+        top: 7rem;
+        left: 14rem;
+    }
+    &__orangecat{
+        position: absolute;
+        top:12rem;
+        left: 9rem;
+    }
+
+    &__catfood{
+        position: absolute;
+        top:7rem;
+        left:9rem;
+    }
 }
