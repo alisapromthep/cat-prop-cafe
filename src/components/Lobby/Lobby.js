@@ -7,6 +7,7 @@ import stretchcat from '../../assets/icons/stretchcat.png';
 import sleepcat from '../../assets/icons/sleepcat.png';
 
 const Lobby = () => {
+
     const cats = [
         {
             src: catfood,

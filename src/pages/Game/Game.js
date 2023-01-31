@@ -1,4 +1,4 @@
-import React, {useState,useEffect} from 'react';
+import React, {useState,useContext} from 'react';
 import './Game.scss';
 import Lobby from '../../components/Lobby/Lobby';
 import Room from '../../components/Room/Room';
@@ -7,9 +7,13 @@ import Console from '../../components/Console/Console';
 import FlowChart from '../../components/FlowChart/FlowChart';
 import componentData from '../../data/componentdata.json';
 import tasks from '../../data/tasks.json';
+import {useGame} from '../../contextProvider/GameContext';
 
 
 const Game = () => {
+
+    const solutionOne = useGame();
+    console.log(solutionOne)
 
     const [code, setCode] = useState(`Select the component from the flowchart`);
 
@@ -25,7 +29,7 @@ const Game = () => {
 
     return (
         <div className='game__container'>
-        <h2 className='game__cafe-name'>Welcome to Cat Prop Cafe </h2>
+        <h2 className='game__cafe-name'>Welcome to Cat Prop Cafe</h2>
         <div className='game'>
             <div className='cafe'>
                 <Lobby/>

@@ -3,6 +3,7 @@ import {useState} from 'react';
 import Game from './pages/Game/Game.js';
 import HomePage from './pages/HomePage/HomePage';
 import Footer from './components/Footer/Footer';
+import { GameProvider } from './contextProvider/GameContext';
 
 function App() {
   const [startGame, setStartGame] = useState(true);
@@ -15,7 +16,9 @@ function App() {
 
   return (
     <div>
-      {startGame ?  <Game/>:<HomePage startHandler={startHandler}/>}
+      <GameProvider>
+        {startGame ?  <Game/>:<HomePage startHandler={startHandler}/>}
+      </GameProvider>
       <Footer/>
     </div>
   );
