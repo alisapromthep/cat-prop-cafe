@@ -4,7 +4,16 @@
         "name":"lobby",
         "import":"import catFood from '../../petintelligent/food.png\nimport stretchyCat from '../../momcatbelly/stretchycat.png'\nimport greyCat from '../../momcatbelly/greycat.png'\nimport sleepingCat from '../../momcatbelly/sleepingcat.png",
         "before":"const Lobby = () => {\nreturn (\n<div> ",
-        "components":["<RoomOne cat=","<RoomTwo cat="],
+        "components":[
+            {
+                "label":"<RoomOne cat=",
+                "inputName":"roomOne"
+            },
+            {
+                "label":"<RoomTwo cat=",
+                "inputName":"roomTwo"
+            }
+    ], 
         "after":"</div>\n)\n}",
         "export":"export default Lobby;"
     },
@@ -12,7 +21,14 @@
         "id":"1",
         "name":"roomOne",
         "before":"const RoomOne = ({cat}) => {\nreturn (\n<div>",
-        "components":["<bedroomOne cat=","<bedroomTwo cat="],
+        "components":[{
+            "label":"<bedroomOne cat=",
+            "inputName":"bedroomOne"
+            },
+            {
+                "label":"<bedroomTwo cat=",
+                "inputName":"bedroomTwo"
+                }],
         "after":"</div>\n)\n}",
         "export":"export default RoomOne;"
     },
@@ -21,7 +37,13 @@
         "name":"roomTwo",
         "import":"import laptopCat from'../../momcatbelly/laptopcat.png'",
         "before":"const RoomTwo = ({cat}) => {\nreturn (\n<div>",
-        "components":["<DiningTable cat=","<img src={laptopCat} onClick="],
+        "components":[{
+            "label":"<DiningTable cat=",
+            "inputName":"diningTable"
+        },
+        {
+            "label":"<img src={laptopCat} onClick=",
+            "inputName":"onClick"}],
         "after":"</div>\n)\n}",
         "export":"export default RoomTwo;"
     },
@@ -29,7 +51,9 @@
         "id":"3",
         "name":"bedroomOne",
         "before":"const BedroomOne = ({cat}) => {\nreturn (\n<div className='bed'",
-        "components":["<img cat={catName}"],
+        "components":[{
+            "label":"<img cat={catName}",
+            "inputName":"bedroomOneImg"}],
         "after":"</div>\n)\n}",
         "export":"export default BedroomOne;"
     },
@@ -37,7 +61,14 @@
         "id":"4",
         "name":"bedroomTwo",
         "before":"const BedroomTwo = ({cat}) => {\nreturn (\n<div className='bed'>",
-        "components":["<img cat={catName}","<Bathroom cat="],
+        "components":[{
+            "label":"<img cat={catName}",
+            "inputName":"bedroomTwoImg"
+        },
+        {
+            "label":"<Bathroom cat=",
+            "inputName":"bathroom"
+            }],
         "after":"</div>\n)\n}",
         "export":"export default BedroomTwo;"
     },
@@ -45,7 +76,10 @@
         "id":"5",
         "name":"sandbox",
         "before":"const Sandbox = ({cat}) => {\nreturn (\n<div className='bathroom'>}",
-        "components":["<img cat="],
+        "components":[{
+            "label":"<img cat=",
+            "inputName":"sandboxImg"
+        }],
         "after":"</div>\n)\n}",
         "export":"export default Sandbox;"
     },
@@ -53,7 +87,10 @@
         "id":"6",
         "name":"DiningTable",
         "before":"const DiningTable = ({cat}) => {\nreturn (\n<div>\n<div className='table' cat={catName}>}",
-        "components":["<img src="],
+        "components":[{
+            "label":"<img src=",
+            "inputName":"diningTableImg"
+        }],
         "after":"</div>\n)\n}",
         "export":"export default DiningTable;"
     }

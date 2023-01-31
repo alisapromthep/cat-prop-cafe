@@ -12,8 +12,7 @@ import {useGame} from '../../contextProvider/GameContext';
 
 const Game = () => {
 
-    const solutionOne = useGame();
-    console.log(solutionOne)
+    const questState = useGame();
 
     const [code, setCode] = useState(`Select the component from the flowchart`);
 

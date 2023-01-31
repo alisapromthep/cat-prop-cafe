@@ -24,7 +24,8 @@ const Console = ({code,componentId}) => {
                 <form className='code__input'>
                     {roomComponents.map((comp,i)=> {
                         return <label key={i}>
-                            {comp} <input type='text'/>
+                            {comp.label} <input type='text'
+                            name= {comp.inputName}/>
                             {`/>`}
                         </label>
                     })}

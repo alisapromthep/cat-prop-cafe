@@ -12,27 +12,32 @@ const Lobby = () => {
         {
             src: catfood,
             class: 'lobby__catfood',
-            description:'bag of catfood'
+            description:'bag of catfood',
+            name: 'Cat Food'
         },
         {
             src: readingcat,
             class: 'lobby__reading-cat',
-            description:'a cat reading'
+            description:'a cat reading',
+            name: 'Smarty'
         },
         {
             src: greycat,
             class: 'lobby__grey-cat',
-            description:'a grey cat standing'
+            description:'a grey cat standing',
+            name:'Smooky'
         },
         {
             src:stretchcat,
             class: 'lobby__stretchcat',
-            describe: 'a grey cat stretching'
+            description: 'a grey cat stretching',
+            name: 'Pepper'
         },
         {
             src:sleepcat,
             class: 'lobby__sleepcat',
-            describe: 'a cat sleeping'
+            description: 'a cat sleeping',
+            name:'Genie'
         }
 
     ]
@@ -43,7 +48,12 @@ const Lobby = () => {
                 <p><span className='lobby__msg--bold'>LaptopCat (say)</span> "meow hungry! Send food"</p>
             </div>
             {cats.map(((cat,i)=>{
-                return <img key={i} src={cat.src} className={`${cat.class} cat`} alt={cat.description}/>
+                return ( 
+                <figure key={i} className={`figure ${cat.class}`}>
+                    <img src={cat.src} className='cat' alt={`${cat.description} and the name is ${cat.name}`}/>
+                    <figcaption>{cat.name}</figcaption>
+                </figure>
+                )
             }))}
         </section>
     )
