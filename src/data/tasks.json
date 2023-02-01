@@ -1,7 +1,7 @@
 [
     {
         "id":1,
-        "description":"Move sleeping cat into bedroomOne",
+        "description":"Move Genie the sleeping cat into bedroomOne",
         "catName": "Genie",
         "steps":[
             {

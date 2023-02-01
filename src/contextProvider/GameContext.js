@@ -9,18 +9,25 @@ const initialGameState = {
     questFour: false,
 }
 
+
 export function useGame() {
     return useContext(GameContext);
 }
 
-export function GameProvider({children}){
-    const [ questCorrect, setQuestCorrect] = useState(initialGameState);
+export function useMultistepForm(){
 
-    const checkAnswer = (event)=>{
-        event.preventDefault();
-        
+    function next(){
 
     }
+    
+    function back(){
+
+    }
+
+}
+
+export function GameProvider({children}){
+    const [ questCorrect, setQuestCorrect] = useState(initialGameState);
 
     return (
         <GameContext.Provider 

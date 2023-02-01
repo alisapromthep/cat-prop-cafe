@@ -14,7 +14,7 @@ const Game = () => {
 
     const questState = useGame();
 
-    const [code, setCode] = useState(`Select the component from the flowchart`);
+    const [code, setCode] = useState(`Select the component from the flowchart to get start`);
 
     const [componentId, setComponentId] = useState(null)
 

@@ -31,7 +31,10 @@ const Console = ({code,componentId}) => {
                     })}
                     <pre>{code.after}</pre>
                     <pre>{code.export}</pre>
-                    <button className='code__button'>next</button>
+                    <div className='code__button-container'>
+                        <button className='code__button'>Next</button>
+                        <button className='code__button'>Submit</button>
+                    </div>
                 </form>
                 : <p>{code}</p>
                 }
