@@ -1,8 +1,12 @@
 import React, { useEffect } from 'react';
 import './Console.scss';
+import {useGame} from '../../contextProvider/GameContext';
 
 
 const Console = ({code,componentId}) => {
+
+    const gameContext = useGame();
+
 
     const lineNum = [];
     for (let i = 1; i<=20; i++){
@@ -24,8 +28,13 @@ const Console = ({code,componentId}) => {
                 <form className='code__input'>
                     {roomComponents.map((comp,i)=> {
                         return <label key={i}>
-                            {comp.label} <input type='text'
-                            name= {comp.inputName}/>
+                            {comp.label} 
+                            <input 
+                            onChange={gameContext.updateInput}
+                            type='text'
+                            name= {`${comp.inputName}`}
+                            value={gameContext.answer[comp.inputName]}
+                            />
                             {`/>`}
                         </label>
                     })}

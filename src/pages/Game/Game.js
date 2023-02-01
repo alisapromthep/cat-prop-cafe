@@ -1,30 +1,17 @@
-import React, {useState,useContext} from 'react';
+import React from 'react';
 import './Game.scss';
 import Lobby from '../../components/Lobby/Lobby';
 import Room from '../../components/Room/Room';
 import FoodArea from '../../components/FoodArea/FoodArea';
 import Console from '../../components/Console/Console';
 import FlowChart from '../../components/FlowChart/FlowChart';
-import componentData from '../../data/componentdata.json';
 import tasks from '../../data/tasks.json';
 import {useGame} from '../../contextProvider/GameContext';
 
 
 const Game = () => {
 
-    const questState = useGame();
-
-    const [code, setCode] = useState(`Select the component from the flowchart to get start`);
-
-    const [componentId, setComponentId] = useState(null)
-
-    const [taskNum, setTaskNum] = useState(0);
-
-    const displayCode = (id)=>{
-        let selectRoom = componentData[id]
-        setComponentId(id);
-        setCode(selectRoom);
-    };
+    const gameContext = useGame();
 
     return (
         <div className='game__container'>
@@ -42,12 +29,12 @@ const Game = () => {
                 <div className='game__instruction'>
                     <h3>React Props</h3>
                     <p>Prop is package/message that can get pass from one component to another. It helps connect and allows one component to communicate with another. The catch is that prop can only be pass down from the parent component to their children.</p>
-                    <h3>Help the kitties....<span>{`${tasks[taskNum].description}`}</span></h3>
-                    <Console code={code}
-                    componentId={componentId}
+                    <h3>Help the kitties....<span>{`${tasks[gameContext.taskNum].description}`}</span></h3>
+                    <Console code={gameContext.code}
+                    componentId={gameContext.componentId}
                     />
                 </div>
-                <FlowChart displayCode={displayCode}/>
+                <FlowChart displayCode={gameContext.displayCode}/>
             </div>
         </div>
         </div>
