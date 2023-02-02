@@ -1,7 +1,9 @@
 import React, {useState, useContext} from 'react';
 import componentData from '../data/componentdata.json';
 import tasks from '../data/tasks.json';
+
 const GameContext = React.createContext();
+
 
 const initialGameState = {
     questOne: false,
@@ -20,17 +22,14 @@ const initialAnswer =
     onClick:"",
     bedroomOneImg:"",
     bedroomTwoImg:"",
-    bathroom: "",
+    sandbox: "",
     sandboxImg:"",
     diningTableImg:""
 }
 
-
-
 export function useGame() {
     return useContext(GameContext);
 }
-
 
 export function GameProvider({children}){
     const [ questCorrect, setQuestCorrect] = useState(initialGameState);
@@ -41,7 +40,9 @@ export function GameProvider({children}){
 
     const [componentId, setComponentId] = useState(null)
 
-    const [taskNum, setTaskNum] = useState(0);
+    const [taskId, setTaskId] = useState(0);
+
+    const [currTask, setCurrTask] = useState(tasks[taskId]);
 
     const displayCode = (id)=>{
         let selectRoom = componentData[id]
@@ -49,11 +50,23 @@ export function GameProvider({children}){
         setCode(selectRoom);
     };
 
-    function next(){
+    function handleAnswerSubmit(event){
+        event.preventDefault();
 
-    }
-    
-    function back(){
+        const currCat = currTask.catName;
+        const solution = currTask.solution;
+
+        console.log(currCat,solution)
+        console.log('answers',answer)
+
+        //check answers 
+        let points = 0;
+        for(let i = 0; i< solution.length;i++){
+            if(answer[solution[i]] === currCat){
+                points ++;
+            }
+        }
+        console.log(points)
 
     }
 
@@ -78,8 +91,9 @@ export function GameProvider({children}){
             code,
             setCode,
             componentId,setComponentId,
-            taskNum,
-            setTaskNum,displayCode})}>
+            taskId,
+            setTaskId,
+            currTask, setCurrTask,displayCode, handleAnswerSubmit})}>
             {children}
         </GameContext.Provider>
     )

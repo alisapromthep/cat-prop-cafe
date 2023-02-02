@@ -66,8 +66,8 @@
             "inputName":"bedroomTwoImg"
         },
         {
-            "label":"<Bathroom cat=",
-            "inputName":"bathroom"
+            "label":"<Sandbox cat=",
+            "inputName":"sandbox"
             }],
         "after":"</div>\n)\n}",
         "export":"export default BedroomTwo;"
@@ -75,7 +75,7 @@
     {
         "id":"5",
         "name":"sandbox",
-        "before":"const Sandbox = ({cat}) => {\nreturn (\n<div className='bathroom'>}",
+        "before":"const Sandbox = ({cat}) => {\nreturn (\n<div className='sandbox'>}",
         "components":[{
             "label":"<img cat=",
             "inputName":"sandboxImg"

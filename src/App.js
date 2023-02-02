@@ -4,23 +4,21 @@ import Game from './pages/Game/Game.js';
 import HomePage from './pages/HomePage/HomePage';
 import Footer from './components/Footer/Footer';
 import { GameProvider } from './contextProvider/GameContext';
+import { BrowserRouter,Routes,Route  } from 'react-router-dom';
 
 function App() {
-  const [startGame, setStartGame] = useState(true);
-
-  const startHandler = (event)=>{
-    event.preventDefault();
-    setStartGame(true);
-  }
-
-
   return (
-    <div>
-      <GameProvider>
-        {startGame ?  <Game/>:<HomePage startHandler={startHandler}/>}
-      </GameProvider>
-      <Footer/>
-    </div>
+    <BrowserRouter>
+      <div>
+        <GameProvider>
+        <Routes>
+          <Route path="/" element={<HomePage/>}/>
+          <Route path="/game/:taskId" element={<Game/>}/>
+        </Routes>
+        </GameProvider>
+        <Footer/>
+      </div>
+    </BrowserRouter>
   );
 }
 

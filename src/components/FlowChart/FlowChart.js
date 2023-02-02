@@ -2,8 +2,11 @@ import React, { useMemo } from 'react';import './FlowChart.scss';
 import ReactFlow, {Background, Controls} from 'reactflow';
 import 'reactflow/dist/style.css';
 import ButtonNode from './ButtonNode';
+import {useGame} from '../../contextProvider/GameContext';
 
-const FlowChart = ({displayCode}) => {
+const FlowChart = () => {
+
+    const {displayCode} = useGame();
 
     const nodeTypes = useMemo(()=>({button: ButtonNode}),[])
 
@@ -69,6 +72,7 @@ const FlowChart = ({displayCode}) => {
             panOnDrag={false}
             panOnScrollMode={'vertical'}
             zoomOnScroll={false}
+            fitView={true}
             >
                 <Background/>
                 <Controls/>

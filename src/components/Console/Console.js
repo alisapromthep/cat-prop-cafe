@@ -3,9 +3,9 @@ import './Console.scss';
 import {useGame} from '../../contextProvider/GameContext';
 
 
-const Console = ({code,componentId}) => {
+const Console = () => {
 
-    const gameContext = useGame();
+    const {code, componentId, updateInput, answer, handleAnswerSubmit} = useGame();
 
 
     const lineNum = [];
@@ -25,15 +25,15 @@ const Console = ({code,componentId}) => {
                 <pre className='code__import'>{code.import}</pre>
                 <pre>{code.before}</pre>
                 {componentId ? 
-                <form className='code__input'>
+                <form className='code__input' onSubmit={handleAnswerSubmit}>
                     {roomComponents.map((comp,i)=> {
                         return <label key={i}>
                             {comp.label} 
                             <input 
-                            onChange={gameContext.updateInput}
+                            onChange={updateInput}
                             type='text'
                             name= {`${comp.inputName}`}
-                            value={gameContext.answer[comp.inputName]}
+                            value={answer[comp.inputName]}
                             />
                             {`/>`}
                         </label>
@@ -41,8 +41,8 @@ const Console = ({code,componentId}) => {
                     <pre>{code.after}</pre>
                     <pre>{code.export}</pre>
                     <div className='code__button-container'>
-                        <button className='code__button'>Next</button>
-                        <button className='code__button'>Submit</button>
+                        <button type='button' className='code__button'>Next</button>
+                        <button type='submit' className='code__button'>Submit</button>
                     </div>
                 </form>
                 : <p>{code}</p>

@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+import {Link} from 'react-router-dom';
 
-const HomePage = ({startHandler}) => {
+const HomePage = () => {
     return (
         <div>
             <h1> Cat Prop Cafe </h1>
-            <button onClick={startHandler}>start</button>
+            <Link to="/game/0">start</Link>
         </div>
     )
 }

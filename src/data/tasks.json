@@ -3,24 +3,22 @@
         "id":1,
         "description":"Move Genie the sleeping cat into bedroomOne",
         "catName": "Genie",
-        "steps":[
-            {
-                "one":"roomOne",
-                "two":"bedroomOne"
-            }
-        ]
+        "solution":[ "roomOne", "bedroomOne", "bedroomOneImg"]
     },
     {
         "id":2,
-        "description":"Move cat food into FoodArea"
+        "description":"have laptop cat send a msg to the screen in the lobby",
+        "solution": ["onClick"]
     },
     {
         "id":3,
-        "description":"have laptop cat send a msg to the screen in the lobby"
+        "description":"Move cat food into FoodArea",
+        "solution": ["roomTwo", "diningTable"]
     },
     {
         "id":4,
-        "description":"Move grey cat to the sandbox"
+        "description":"Move grey cat to the sandbox",
+        "solution": ["roomOne","bedroomTwo", "sandBox", "sandBoxImg"]
     }
 
 ]
