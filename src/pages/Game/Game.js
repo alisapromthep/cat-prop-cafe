@@ -5,17 +5,13 @@ import Room from '../../components/Room/Room';
 import FoodArea from '../../components/FoodArea/FoodArea';
 import Console from '../../components/Console/Console';
 import FlowChart from '../../components/FlowChart/FlowChart';
-import tasks from '../../data/tasks.json';
 import {useGame} from '../../contextProvider/GameContext';
 import {useParams} from 'react-router-dom';
 
 
 const Game = () => {
 
-    const {taskId} = useParams();
-
-    //const gameContext = useGame();
-
+    const {taskId, currTask: task} = useGame();
 
     return (
         <div className='game__container'>
@@ -33,7 +29,8 @@ const Game = () => {
                 <div className='game__instruction'>
                     <h3>React Props</h3>
                     <p>Prop is package/message that can get pass from one component to another. It helps connect and allows one component to communicate with another. The catch is that prop can only be pass down from the parent component to their children.</p>
-                    <h3>Help the kitties....<span>{`${tasks[taskId].description}`}</span></h3>
+                    <h3>Help the kitties....<span>{`${task.description}`}</span></h3>
+                    <p>Total Points: {task.totalPoints}</p>
                     <Console />
                 </div>
                 <FlowChart />

@@ -1,24 +1,31 @@
 [
     {
         "id":1,
+        "name": "taskOne",
         "description":"Move Genie the sleeping cat into bedroomOne",
         "catName": "Genie",
-        "solution":[ "roomOne", "bedroomOne", "bedroomOneImg"]
+        "solution":[ "roomOne", "bedroomOne", "bedroomOneImg"],
+        "totalPoints": 3
     },
     {
         "id":2,
-        "description":"have laptop cat send a msg to the screen in the lobby",
-        "solution": ["onClick"]
+        "name": "taskTwo",
+        "description":"Move grey cat to the sandbox",
+        "solution": ["roomOne","bedroomTwo", "sandBox", "sandBoxImg"],
+        "totalPoints": 4
     },
     {
         "id":3,
-        "description":"Move cat food into FoodArea",
-        "solution": ["roomTwo", "diningTable"]
+        "name": "taskThree",
+        "description":"have laptop cat send a msg to the screen in the lobby",
+        "solution": ["onClick"],
+        "totalPoints": 1
     },
     {
         "id":4,
-        "description":"Move grey cat to the sandbox",
-        "solution": ["roomOne","bedroomTwo", "sandBox", "sandBoxImg"]
+        "name": "taskFour",
+        "description":"Move cat food into FoodArea",
+        "solution": ["roomTwo", "diningTable", "diningTableImg"],
+        "totalPoints": 3
     }
-
 ]

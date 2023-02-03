@@ -6,10 +6,10 @@ const GameContext = React.createContext();
 
 
 const initialGameState = {
-    questOne: false,
-    questTwo: false,
-    questThree: false,
-    questFour: false,
+    taskOne: false,
+    taskTwo: false,
+    taskThree: false,
+    taskFour: false,
 }
 
 const initialAnswer = 
@@ -55,19 +55,32 @@ export function GameProvider({children}){
 
         const currCat = currTask.catName;
         const solution = currTask.solution;
+        const totalPoints = currTask.totalPoints;
+
 
         console.log(currCat,solution)
         console.log('answers',answer)
 
         //check answers 
-        let points = 0;
+        let playerPoints = 0;
         for(let i = 0; i< solution.length;i++){
             if(answer[solution[i]] === currCat){
-                points ++;
+                playerPoints ++;
             }
         }
-        console.log(points)
 
+        if(playerPoints === totalPoints){
+            setQuestCorrect(prev=>{
+                return {
+                    ...prev, 
+                    [currTask.name]:true
+                }
+            })
+            alert(`Great job!`)
+            setAnswer(initialAnswer);
+        } else {
+            alert(`${playerPoints}/${totalPoints} you may have missed a step somewhere, the cat is not where it needs to be`);
+        }
     }
 
     function updateInput(event){
@@ -78,6 +91,10 @@ export function GameProvider({children}){
                 [event.target.name]: event.target.value
             }
         })
+    }
+
+    function displayClass (taskNum){
+        return questCorrect[taskNum] ? 'appear':'disappear';
     }
 
     return (
@@ -93,7 +110,7 @@ export function GameProvider({children}){
             componentId,setComponentId,
             taskId,
             setTaskId,
-            currTask, setCurrTask,displayCode, handleAnswerSubmit})}>
+            currTask, setCurrTask,displayCode, handleAnswerSubmit, displayClass})}>
             {children}
         </GameContext.Provider>
     )
