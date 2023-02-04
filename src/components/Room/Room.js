@@ -6,7 +6,8 @@ import greycat from '../../assets/icons/greycat.png';
 import {useGame} from '../../contextProvider/GameContext';
 
 const Room = () => {
-    const {currTask, displayClass} = useGame();
+    const {currTask, appearClass} = useGame();
+    
 
 
 
@@ -16,14 +17,14 @@ const Room = () => {
             <div className='room__container'>
                 <div className='room__bedroom'>
                     <p>Bedroom One</p>
-                    <Bed imgSrc={sleepcat} alt='sleeping cat' nameClass={`cat ${displayClass(currTask.name)}`}/>
+                    <Bed imgSrc={sleepcat} alt='sleeping cat' nameClass={`cat ${appearClass('taskOne')}`}/>
                 </div>
                 <div className='room__bedroom'>
                     <p>Bedroom Two</p>
                     <Bed/>
                 <div className='room__sandbox'>
                     <p>sandbox</p>
-                    <img src={greycat} alt='grey cat standing' className={`cat`}/>
+                    <img src={greycat} alt='grey cat standing' className={`cat ${appearClass('taskTwo')}`}/>
                 </div>
             </div>
             </div>

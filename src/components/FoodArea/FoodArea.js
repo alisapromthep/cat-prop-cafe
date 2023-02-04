@@ -4,8 +4,11 @@ import './FoodArea.scss';
 import eatcat from '../../assets/icons/eatcat.png';
 import laptopcat from '../../assets/icons/laptopcat.png';
 import catfood from '../../assets/icons/cat-food.png';
+import {useGame} from '../../contextProvider/GameContext';
 
 const FoodArea = () => {
+
+    const {currTask, appearClass} = useGame();
 
 
     const Foodcats = [
@@ -26,7 +29,7 @@ const FoodArea = () => {
         },
         {
             src: catfood,
-            class: 'foodarea__catfood',
+            class: `foodarea__catfood ${appearClass('taskFour')}`,
             description:'a bag of cat food'
         },
     ];

@@ -8,9 +8,10 @@
     position: relative;
 
     &__monitor{
-        background-color: #F7F7F9;
+        background-color: #464649;
         border: 6px solid #d2cdc6;
         width: 10rem;
+        height: 6rem;
         padding: 1rem;
         position: absolute;
         top: 1rem;
@@ -18,6 +19,9 @@
     }
 
     &__msg {
+
+        color: white;
+
         &--bold{
             font-weight: 800;
         }

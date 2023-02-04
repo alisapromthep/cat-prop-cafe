@@ -93,8 +93,12 @@ export function GameProvider({children}){
         })
     }
 
-    function displayClass (taskNum){
+    function appearClass (taskNum){
         return questCorrect[taskNum] ? 'appear':'disappear';
+    }
+
+    function disappearClass (taskNum){
+        return questCorrect[taskNum] ? 'disappear':'appear';
     }
 
     return (
@@ -110,7 +114,7 @@ export function GameProvider({children}){
             componentId,setComponentId,
             taskId,
             setTaskId,
-            currTask, setCurrTask,displayCode, handleAnswerSubmit, displayClass})}>
+            currTask, setCurrTask,displayCode, handleAnswerSubmit, appearClass, disappearClass})}>
             {children}
         </GameContext.Provider>
     )

@@ -5,13 +5,15 @@ import greycat from '../../assets/icons/greycat.png';
 import catfood from '../../assets/icons/cat-food.png';
 import stretchcat from '../../assets/icons/stretchcat.png';
 import sleepcat from '../../assets/icons/sleepcat.png';
+import {useGame} from '../../contextProvider/GameContext';
 
 const Lobby = () => {
+    const {currTask, appearClass, disappearClass} = useGame();
 
     const cats = [
         {
             src: catfood,
-            class: 'lobby__catfood',
+            class: `lobby__catfood ${disappearClass('taskFour')}`,
             description:'bag of catfood',
             name: 'Cat Food'
         },
@@ -23,7 +25,7 @@ const Lobby = () => {
         },
         {
             src: greycat,
-            class: 'lobby__grey-cat',
+            class: `lobby__grey-cat ${disappearClass('taskTwo')}`,
             description:'a grey cat standing',
             name:'Smooky'
         },
@@ -35,7 +37,7 @@ const Lobby = () => {
         },
         {
             src:sleepcat,
-            class: 'lobby__sleepcat',
+            class: `lobby__sleepcat ${disappearClass('taskOne')}`,
             description: 'a cat sleeping',
             name:'Genie'
         }
@@ -45,7 +47,7 @@ const Lobby = () => {
         <section className='lobby'>
             Lobby
             <div className='lobby__monitor'>
-                <p><span className='lobby__msg--bold'>LaptopCat (say)</span> "meow hungry! Send food"</p>
+                <p className={`'lobby__msg' ${appearClass('taskThree')}`}><span className= 'lobby__msg--bold'>LaptopCat (say)</span> "meow hungry! Send food"</p>
             </div>
             {cats.map(((cat,i)=>{
                 return ( 
