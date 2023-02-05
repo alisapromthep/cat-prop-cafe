@@ -57,10 +57,6 @@ export function GameProvider({children}){
         const solution = currTask.solution;
         const totalPoints = currTask.totalPoints;
 
-
-        console.log(currCat,solution)
-        console.log('answers',answer)
-
         //check answers 
         let playerPoints = 0;
         for(let i = 0; i< solution.length;i++){
@@ -78,6 +74,7 @@ export function GameProvider({children}){
             })
             alert(`Great job!`)
             setAnswer(initialAnswer);
+
         } else {
             alert(`${playerPoints}/${totalPoints} you may have missed a step somewhere, the cat is not where it needs to be`);
         }
