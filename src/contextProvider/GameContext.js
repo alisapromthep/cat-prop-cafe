@@ -1,4 +1,5 @@
 import React, {useState, useContext} from 'react';
+import {redirect}  from "react-router-dom";
 import componentData from '../data/componentdata.json';
 import tasks from '../data/tasks.json';
 
@@ -10,6 +11,13 @@ const initialGameState = {
     taskTwo: false,
     taskThree: false,
     taskFour: false,
+}
+
+const initialScore = {
+    taskOne: 0,
+    taskTwo: 0,
+    taskThree: 0,
+    taskFour:0,
 }
 
 const initialAnswer = 
@@ -44,14 +52,21 @@ export function GameProvider({children}){
 
     const [currTask, setCurrTask] = useState(tasks[taskId]);
 
+    const [currScore, setCurrScore] = useState(initialScore);
+
     const displayCode = (id)=>{
         let selectRoom = componentData[id]
         setComponentId(id);
         setCode(selectRoom);
     };
 
+    function nextTask(){
+        setTaskId(prev => prev+1);
+        return redirect(`/game/${taskId}`);;
+    }
     function handleAnswerSubmit(event){
         event.preventDefault();
+
 
         const currCat = currTask.catName;
         const solution = currTask.solution;
@@ -72,8 +87,15 @@ export function GameProvider({children}){
                     [currTask.name]:true
                 }
             })
-            alert(`Great job!`)
+            setCurrScore(prev=>{
+                return {
+                    ...prev,
+                    [currTask.name]:playerPoints
+                }
+            })
             setAnswer(initialAnswer);
+            
+            nextTask();
 
         } else {
             alert(`${playerPoints}/${totalPoints} you may have missed a step somewhere, the cat is not where it needs to be`);
@@ -111,7 +133,9 @@ export function GameProvider({children}){
             componentId,setComponentId,
             taskId,
             setTaskId,
-            currTask, setCurrTask,displayCode, handleAnswerSubmit, appearClass, disappearClass})}>
+            currTask, setCurrTask,
+            currScore, setCurrScore,
+            displayCode, handleAnswerSubmit, appearClass, disappearClass})}>
             {children}
         </GameContext.Provider>
     )

@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './Console.scss';
 import {useGame} from '../../contextProvider/GameContext';
+import { useFetcher } from 'react-router-dom';
 
 
 const Console = () => {
 
     const {code, componentId, updateInput, answer, handleAnswerSubmit} = useGame();
-
 
     const lineNum = [];
     for (let i = 1; i<=20; i++){

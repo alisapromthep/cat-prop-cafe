@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Game.scss';
 import Lobby from '../../components/Lobby/Lobby';
 import Room from '../../components/Room/Room';
@@ -6,12 +6,13 @@ import FoodArea from '../../components/FoodArea/FoodArea';
 import Console from '../../components/Console/Console';
 import FlowChart from '../../components/FlowChart/FlowChart';
 import {useGame} from '../../contextProvider/GameContext';
-import {useParams} from 'react-router-dom';
+import Modal from 'react-modal';
 
 
 const Game = () => {
 
-    const {taskId, currTask: task} = useGame();
+    const {modalIsOpen, setIsOpen} = useState(false);
+    const {questCorrect, taskId, currTask: task, currScore: score} = useGame();
 
     return (
         <div className='game__container'>
