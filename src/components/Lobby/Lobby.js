@@ -27,7 +27,7 @@ const Lobby = () => {
             src: greycat,
             class: `lobby__grey-cat ${disappearClass('taskTwo')}`,
             description:'a grey cat standing',
-            name:'Smooky'
+            name:'Smokey'
         },
         {
             src:stretchcat,

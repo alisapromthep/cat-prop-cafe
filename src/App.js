@@ -13,7 +13,7 @@ function App() {
         <GameProvider>
         <Routes>
           <Route path="/" element={<HomePage/>}/>
-          <Route path="/game/:taskId" element={<Game/>}/>
+          <Route path="/game" element={<Game/>}/>
         </Routes>
         </GameProvider>
         <Footer/>

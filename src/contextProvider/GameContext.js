@@ -1,8 +1,7 @@
 import React, {useState, useContext} from 'react';
-import {redirect}  from "react-router-dom";
 import componentData from '../data/componentdata.json';
 import tasks from '../data/tasks.json';
-
+import Modal from 'react-modal';
 const GameContext = React.createContext();
 
 
@@ -48,9 +47,11 @@ export function GameProvider({children}){
 
     const [componentId, setComponentId] = useState(null)
 
-    const [taskId, setTaskId] = useState(0);
+    const [taskId, setTaskId] = useState(3);
 
-    const [currTask, setCurrTask] = useState(tasks[taskId]);
+    const [tasksList, setTasksList] = useState([...tasks]);
+
+    const [currTask, setCurrTask] = useState(tasksList[taskId]);
 
     const [currScore, setCurrScore] = useState(initialScore);
 
@@ -62,20 +63,23 @@ export function GameProvider({children}){
 
     function nextTask(){
         setTaskId(prev => prev+1);
-        return redirect(`/game/${taskId}`);;
+        return taskId;
     }
+
     function handleAnswerSubmit(event){
         event.preventDefault();
 
 
-        const currCat = currTask.catName;
+        const correctInput = currTask.input;
         const solution = currTask.solution;
         const totalPoints = currTask.totalPoints;
-
+        console.log(answer)
         //check answers 
         let playerPoints = 0;
         for(let i = 0; i< solution.length;i++){
-            if(answer[solution[i]] === currCat){
+            
+            if(answer[solution[i]] === correctInput){
+                console.log(solution[i])
                 playerPoints ++;
             }
         }
@@ -94,7 +98,7 @@ export function GameProvider({children}){
                 }
             })
             setAnswer(initialAnswer);
-            
+            alert(`Great job!`)
             nextTask();
 
         } else {
@@ -133,6 +137,7 @@ export function GameProvider({children}){
             componentId,setComponentId,
             taskId,
             setTaskId,
+            tasksList,
             currTask, setCurrTask,
             currScore, setCurrScore,
             displayCode, handleAnswerSubmit, appearClass, disappearClass})}>

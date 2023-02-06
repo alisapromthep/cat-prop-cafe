@@ -20,27 +20,33 @@ const FoodArea = () => {
         {
             src: eatcat,
             class: 'foodarea__eatcat',
-            description:'cat eating fisht'
+            description:'cat eating fisht',
+            name:'Tigger'
         },
         {
             src: laptopcat,
             class: 'foodarea__laptopcat',
-            description:'cat using a laptop'
+            description:'cat using a laptop',
+            name:'Simba'
         },
         {
             src: catfood,
             class: `foodarea__catfood ${appearClass('taskFour')}`,
-            description:'a bag of cat food'
+            description:'a bag of cat food',
+            name: 'Catfood'
         },
     ];
     return (
         <div className='foodarea'>
             <p>RoomTwo</p>
             <div className='foodarea__table'></div>
-            
             {Foodcats.map((cat,i)=>{
-                return <img key={i} src={cat.src} alt={cat.description} className={`cat ${cat.class}`}/>
-            })}
+                return (
+                    <figure key={i} className= {`figure ${cat.class}`}>
+                        <img key={i} src={cat.src} alt={cat.description} className={`cat`}/>
+                        <figcaption>{cat.name}</figcaption>
+                    </figure>
+            )})}
         </div>
     )
 }
