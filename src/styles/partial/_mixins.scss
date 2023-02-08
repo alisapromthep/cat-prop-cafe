@@ -9,3 +9,11 @@
         @content;
     }
 }
+
+    @mixin large-desktop {
+        @media (min-width: 90rem){
+            @content;
+        }
+}
+
+

@@ -47,7 +47,7 @@ const Lobby = () => {
         <section className='lobby'>
             Lobby
             <div className='lobby__monitor'>
-                <p className={`'lobby__msg' ${appearClass('taskThree')}`}><span className= 'lobby__msg--bold'>LaptopCat (say)</span> "meow hungry! Send food"</p>
+                <p className={`lobby__msg ${appearClass('taskThree')}`}><span className= 'lobby__msg--bold'>Simba:</span> "meow hungry! Send food"</p>
             </div>
             {cats.map(((cat,i)=>{
                 return ( 

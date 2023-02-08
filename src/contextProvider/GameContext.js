@@ -47,7 +47,7 @@ export function GameProvider({children}){
 
     const [componentId, setComponentId] = useState(null)
 
-    const [taskId, setTaskId] = useState(3);
+    const [taskId, setTaskId] = useState(0);
 
     const [tasksList, setTasksList] = useState([...tasks]);
 
@@ -98,7 +98,6 @@ export function GameProvider({children}){
                 }
             })
             setAnswer(initialAnswer);
-            alert(`Great job!`)
             nextTask();
 
         } else {
