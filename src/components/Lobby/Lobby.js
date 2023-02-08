@@ -8,7 +8,7 @@ import sleepcat from '../../assets/icons/sleepcat.png';
 import {useGame} from '../../contextProvider/GameContext';
 
 const Lobby = () => {
-    const {currTask, appearClass, disappearClass} = useGame();
+    const {appearClass, disappearClass} = useGame();
 
     const cats = [
         {

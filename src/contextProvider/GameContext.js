@@ -73,7 +73,7 @@ export function GameProvider({children}){
         const correctInput = currTask.input;
         const solution = currTask.solution;
         const totalPoints = currTask.totalPoints;
-        console.log(answer)
+
         //check answers 
         let playerPoints = 0;
         for(let i = 0; i< solution.length;i++){
