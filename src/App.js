@@ -5,12 +5,14 @@ import HomePage from './pages/HomePage/HomePage';
 import Footer from './components/Footer/Footer';
 import { GameProvider } from './contextProvider/GameContext';
 import { BrowserRouter,Routes,Route  } from 'react-router-dom';
+import NavBar from './components/NavBar/NavBar';
 
 function App() {
   return (
     <BrowserRouter>
       <div>
         <GameProvider>
+          <NavBar/>
         <Routes>
           <Route path="/" element={<HomePage/>}/>
           <Route path="/game" element={<Game/>}/>

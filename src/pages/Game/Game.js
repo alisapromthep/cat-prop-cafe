@@ -17,7 +17,6 @@ const Game = () => {
 
     return (
         <div className='game__container'>
-        <h2 className='game__cafe-name'>Welcome to Cat Prop Cafe</h2>
         <div className='game'>
             <div className='cafe'>
                 <Lobby/>
@@ -32,12 +31,9 @@ const Game = () => {
                     {
                         task ? 
                         <div>
-                            <h3>React Props</h3>
-                            <p>Prop is package/message that can get pass from one component to another. It helps connect and allows one component to communicate with another. The catch is that prop can only be pass down from the parent component to their children.</p>
-
-                            <h3>Help the kitties....<span>{`${task.id}.`}</span><span>{`${task.description}`}</span></h3>
+                            <h3>Task {`${task.id}.`}<span> {`${task.description}`}</span></h3>
                             <p>Total Points: {task.totalPoints}</p>
-                            <p>Input you need too add to the box: {task.input}</p>
+                            <p>Input you need to add to the box: {task.input}</p>
                         </div>
                     : <div><p> Congratulations! you got it! </p></div>
                     }

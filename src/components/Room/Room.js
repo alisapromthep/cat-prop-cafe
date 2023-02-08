@@ -20,8 +20,7 @@ const Room = () => {
                     <Bed imgSrc={sleepcat} alt='sleeping cat' nameClass={`cat ${appearClass('taskOne')}`}/>
                 </div>
                 <div className='room__bedroom'>
-                    <p>Bedroom Two</p>
-                    <Bed/>
+                    <p>Toilet</p>
                 <div className='room__sandbox'>
                     <p>sandbox</p>
                     <img src={greycat} alt='grey cat standing' className={`cat ${appearClass('taskTwo')}`}/>

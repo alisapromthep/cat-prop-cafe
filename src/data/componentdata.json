@@ -2,15 +2,15 @@
     {
         "id":"0",
         "name":"lobby",
-        "import":"import catFood from '../../petintelligent/food.png\nimport stretchyCat from '../../momcatbelly/stretchycat.png'\nimport greyCat from '../../momcatbelly/greycat.png'\nimport sleepingCat from '../../momcatbelly/sleepingcat.png",
-        "before":"const Lobby = () => {\nreturn (\n<div> ",
+        "import":"import catFood from '../../assets/image/food.png\nimport pepper from '../../assets/image/stretchycat.png'\nimport smokey from '../../assets/image/greycat.png'\nimport genie from '../../assets/image/sleepingcat.png",
+        "before":"const Lobby = () => {\nfunction sendMessage(){\nreturn simba's message\n}\nreturn (\n<div> ",
         "components":[
             {
                 "label":"<RoomOne cat=",
                 "inputName":"roomOne"
             },
             {
-                "label":"<RoomTwo cat=",
+                "label":"<RoomTwo sendMessage={sendMessage()} cat=",
                 "inputName":"roomTwo"
             }
     ], 
@@ -35,8 +35,8 @@
     {
         "id":"2",
         "name":"roomTwo",
-        "import":"import laptopCat from'../../momcatbelly/laptopcat.png'",
-        "before":"const RoomTwo = ({cat}) => {\nreturn (\n<div>",
+        "import":"import simba from'../../assets/image/laptopcat.png'",
+        "before":"const RoomTwo = ({cat,sendMessage}) => {\nreturn (\n<div>",
         "components":[{
             "label":"<DiningTable cat=",
             "inputName":"diningTable"
