@@ -1,8 +1,6 @@
 import React from 'react';
 import './Console.scss';
 import {useGame} from '../../contextProvider/GameContext';
-import { useFetcher } from 'react-router-dom';
-
 
 const Console = () => {
 

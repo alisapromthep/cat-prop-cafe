@@ -18,15 +18,18 @@ const Game = () => {
     return (
         <div className='game__container'>
         <div className='game'>
-            <div className='cafe'>
-                <Lobby/>
-                <div className='cafe__inside-room'>
-                    <Room/>
-                    <div className='cafe__hallway'></div>
-                    <FoodArea/>
+            <div className='game__top-container'> 
+                <div className='cafe'>
+                    <Lobby/>
+                    <div className='cafe__inside-room'>
+                        <Room/>
+                        <div className='cafe__hallway'></div>
+                        <FoodArea/>
+                    </div>
                 </div>
+                <FlowChart />
             </div>
-            <div className='game__control'>
+            <div className='game__bottom-container'>
                 <div className='game__instruction'>
                     {
                         task ? 
@@ -37,9 +40,8 @@ const Game = () => {
                         </div>
                     : <div><p> Congratulations! you got it! </p></div>
                     }
-                    <Console />
                 </div>
-                <FlowChart />
+                <Console />
             </div>
         </div>
         </div>
