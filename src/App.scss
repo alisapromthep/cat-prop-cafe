@@ -7,6 +7,9 @@
 
 body {
     margin: 0;
+    background-color: #fcfbf9;
+    background-image: radial-gradient( ellipse farthest-corner at 4px 4px , #ffe1a5, #ffe1a5 30%, #fcfbf9 30%);
+    background-size: 4px 4px;
 }
 
 pre{
