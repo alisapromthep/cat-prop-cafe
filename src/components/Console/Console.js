@@ -39,7 +39,6 @@ const Console = () => {
                     <pre>{code.after}</pre>
                     <pre>{code.export}</pre>
                     <div className='code__button-container'>
-                        <button type='button' className='code__button'>Next</button>
                         <button type='submit' className='code__button'>Submit</button>
                     </div>
                 </form>

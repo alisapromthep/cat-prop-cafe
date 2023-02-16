@@ -2,5 +2,9 @@
     {
         "page": 1,
         "content": ""
+    },
+    {
+        "name":"tutorial",
+        "content":"Just as you would pass props in react component, add props to all the places to make them appear at the destination"
     }
 ]

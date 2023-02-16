@@ -1,11 +1,43 @@
+@use '../../styles/partial/colors' as *;
+
 .home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: 2rem;
+    border: 2px solid $primary;
+    
     &__cafe-name{
         text-align: center;
-        color: #F0D7DF;
+        color: $primary;
         height: 100%;
         margin: 0;
-        padding: 1rem 0;
         font-family: 'Pacifico', 'sans-serif';
         font-size: 4rem;
+    }
+
+    &__welcome{
+        margin: 2rem;
+    }
+
+    &__start-button{
+        font-size: 2rem;
+        color: $primary;
+        text-decoration: none;
+        font-family: 'Pacifico', 'sans-serif';
+        text-transform: uppercase;
+        padding: 0.25rem 1rem;
+        border: 2px solid $primary;
+        border-radius: 2rem;
+
+    }
+
+    &__cat-container{
+        margin: 2rem 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
     }
 }

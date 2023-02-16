@@ -1,8 +1,8 @@
 import React, {useState, useContext} from 'react';
 import componentData from '../data/componentdata.json';
 import tasks from '../data/tasks.json';
-import Modal from 'react-modal';
 const GameContext = React.createContext();
+
 
 
 const initialGameState = {
@@ -54,6 +54,7 @@ export function GameProvider({children}){
     const [currTask, setCurrTask] = useState(tasksList[taskId]);
 
     const [currScore, setCurrScore] = useState(initialScore);
+    
 
     const displayCode = (id)=>{
         let selectRoom = componentData[id]

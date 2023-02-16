@@ -41,3 +41,11 @@ pre{
 .bounce {
     animation: bounce 1s linear infinite;
 }
+
+.confetti{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border: solid 4px red;
+}

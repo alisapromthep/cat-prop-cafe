@@ -27,22 +27,13 @@
 
     &__instruction{
         width: 50%;
-    }
-}
-
-.cafe{
-    border: 1px solid black;
-    border-top:10px solid #d6eaff;
-    height: 25rem;
-    width: 45rem;
-
-    &__inside-room{
         display: flex;
-        height: 50%;
-    }
+        flex-direction: column;
 
-    &__hallway{
-        background-color: #ded6ce;
-        width: 10%;
+        @include desktop{
+            flex-direction: row;
+        }
     }
 }
+
+

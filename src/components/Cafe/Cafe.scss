@@ -1,0 +1,20 @@
+@use '../../styles/partial/mixins' as *;
+@use '../../styles/partial/typography' as *;
+
+
+.cafe{
+    border: 1px solid black;
+    border-top:10px solid #d6eaff;
+    height: 25rem;
+    width: 45rem;
+
+    &__inside-room{
+        display: flex;
+        height: 50%;
+    }
+
+    &__hallway{
+        background-color: #ded6ce;
+        width: 10%;
+    }
+}
