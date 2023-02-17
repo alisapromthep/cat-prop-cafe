@@ -10,18 +10,31 @@ import Popup from 'reactjs-popup';
 
 const Game = () => {
 
-    const {questCorrect, taskId,tasksList, currTask: task, setCurrTask, currScore: score} = useGame();
+    const {questCorrect, taskId,tasksList, currTask: task, setCurrTask, currScore: score,nextTask, open} = useGame();
 
     useEffect(()=>{setCurrTask(tasksList[taskId])}, [taskId])
 
     return (
         <div className='game__container'>
-            <Popup>
-                <ReactCanvasConfetti
-                className='confetti'
-                fire={questCorrect[task.name]}
-                reset=''
-                /> 
+            <Popup
+            open= {true}
+            position="center"
+            className='popup__game'
+            >
+                {questCorrect[task.name] ? 
+                    <div className='popup__right'>
+                        <p>Correct!</p>
+                        <button className='popup__button' type='button' onClick={nextTask}>next</button>
+                    </div> :
+                    <div className='popup__wrong'>
+                        <p> {`${score[task.name]}/${task.totalPoints}
+                        you may have missed a step somewhere, the cat is not where it needs to be`}</p>
+                        <button className='popup__button' type='button'>Keep trying</button>
+                        <button className='popup__button' type='button'>See solution</button>
+                        <button className='popup__button' type='button' onClick={nextTask}>Skip</button>
+
+                    </div>
+                }
             </Popup>
             <div className='game'>
                 <div className='game__top-container'> 

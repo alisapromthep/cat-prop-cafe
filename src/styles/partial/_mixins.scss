@@ -16,4 +16,12 @@
         }
 }
 
-
+@mixin popup {
+    width: 25rem;
+    height: 10rem;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

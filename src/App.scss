@@ -43,9 +43,16 @@ pre{
 }
 
 .confetti{
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
+    width: 40rem;
+    height: 35rem;
     border: solid 4px red;
+}
+
+.popup {
+    &__button{
+    width: 8rem;
+    background-color: white;
+    border: none;
+
+    }
 }

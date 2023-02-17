@@ -37,3 +37,13 @@
 }
 
 
+.popup {
+    &__right{
+        @include popup;
+        background-color: rgba(131, 197, 190,1);
+    }
+    &__wrong{
+        @include popup;
+        background-color: rgba(245, 202, 195,1);
+    }
+}

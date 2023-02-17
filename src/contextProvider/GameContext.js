@@ -54,6 +54,8 @@ export function GameProvider({children}){
     const [currTask, setCurrTask] = useState(tasksList[taskId]);
 
     const [currScore, setCurrScore] = useState(initialScore);
+
+    const [open, setOpen] = useState(false);
     
 
     const displayCode = (id)=>{
@@ -69,7 +71,6 @@ export function GameProvider({children}){
 
     function handleAnswerSubmit(event){
         event.preventDefault();
-
 
         const correctInput = currTask.input;
         const solution = currTask.solution;
@@ -99,11 +100,13 @@ export function GameProvider({children}){
                 }
             })
             setAnswer(initialAnswer);
-            nextTask();
+            //nextTask();
 
         } else {
-            alert(`${playerPoints}/${totalPoints} you may have missed a step somewhere, the cat is not where it needs to be`);
+            currScore[currTask.name] = playerPoints
         }
+
+        setOpen(true);
     }
 
     function updateInput(event){
@@ -140,7 +143,8 @@ export function GameProvider({children}){
             tasksList,
             currTask, setCurrTask,
             currScore, setCurrScore,
-            displayCode, handleAnswerSubmit, appearClass, disappearClass})}>
+            open,setOpen,
+            displayCode, handleAnswerSubmit, appearClass, disappearClass,nextTask})}>
             {children}
         </GameContext.Provider>
     )
