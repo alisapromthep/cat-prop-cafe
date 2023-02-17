@@ -16,11 +16,13 @@ const Game = () => {
 
     return (
         <div className='game__container'>
-        {/* <ReactCanvasConfetti
-        className='confetti'
-        fire={questCorrect[task.name]}
-        reset=''
-        /> */}
+            <Popup>
+                <ReactCanvasConfetti
+                className='confetti'
+                fire={questCorrect[task.name]}
+                reset=''
+                /> 
+            </Popup>
             <div className='game'>
                 <div className='game__top-container'> 
                     <Cafe/>

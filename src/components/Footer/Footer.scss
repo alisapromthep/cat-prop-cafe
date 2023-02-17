@@ -1,0 +1,9 @@
+.footer {
+    background-color: #dda15e;
+    display: flex;
+    flex-direction: column;
+
+    &__bottom-container {
+        display: flex;
+    }
+}
