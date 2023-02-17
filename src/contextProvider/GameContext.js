@@ -66,6 +66,7 @@ export function GameProvider({children}){
 
     function nextTask(){
         setTaskId(prev => prev+1);
+        setOpen(false)
         return taskId;
     }
 
