@@ -1,10 +1,19 @@
 [
     {
-        "page": 1,
-        "content": ""
-    },
-    {
         "name":"tutorial",
         "content":"Just as you would pass props in react component, add props to all the places to make them appear at the destination"
+    },
+    {
+        "name":"hint",
+        "content":"Follow the flowchart from parent to the destination"
+    },
+    {
+        "name":"taskOne",
+        "content":"Just as you would pass props in react component, add props to all the places to make them appear at the destination"
+    },
+    {
+        "name":"taskThree",
+        "content":"One way to send information from child component to its parent is by using a call back function"
     }
+
 ]

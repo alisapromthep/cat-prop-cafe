@@ -14,7 +14,19 @@ const Game = () => {
 
     useEffect(()=>{setCurrTask(tasksList[taskId])}, [taskId])
 
+
+    if(!task){
+        return (<Popup
+        open={true}
+        >
+            <div><p> That's all! Thank you helping the kitties, hope React Props is more clear to you now!</p></div>
+            <button onClick={()=> setOpen(false)}> Back to Home </button>
+        </Popup>
+        )
+    }
+
     return (
+        
         <div className='game__container'>
             <Popup
             open= {open}
@@ -31,7 +43,6 @@ const Game = () => {
                         you may have missed a step somewhere, the cat is not where it needs to be`}</p>
                         <button className='popup__button' type='button' onClick={()=>{setOpen(false)}}>Keep trying</button>
                         <button className='popup__button' type='button' onClick={nextTask}>Skip</button>
-
                     </div>
                 }
             </Popup>
