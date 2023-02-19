@@ -11,7 +11,7 @@ const ButtonNode = ({id,data}) => {
         <>
             <Handle type="source" position={Position.Bottom}/>
             <button  className={`flowchart__button flowchart__${data.level}`} onClick={handleClick}>{data.label}</button>
-            <Tooltip/>
+            <Tooltip content='click me'/>
             <Handle type="target" position={Position.Top}/>
         </>
     )

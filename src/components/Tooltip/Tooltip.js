@@ -7,12 +7,14 @@ function Tooltip(content) {
     return (
         <Popup
         trigger={
-            <FaRegHandPointLeft/>
+            <button type='button' className='tooltip__button'>
+                <FaRegHandPointLeft/>
+            </button>
         }
         on={['hover']}
         position='right top'
         closeOnDocumentClick>
-            <span>click me</span>
+            <span>click the component</span>
         </Popup>
     )
 }
