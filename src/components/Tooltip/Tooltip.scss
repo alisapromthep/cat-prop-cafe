@@ -1,6 +1,9 @@
+@use '../../styles/partial/animations' as *;
+
 .tooltip{
     &__button{
-        background-color: white;
+        background-color: transparent;
         border: none;
+        animation: bounce-left 1s linear infinite;
     }
 }

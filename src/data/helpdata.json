@@ -8,8 +8,8 @@
         "content":"Follow the flowchart from parent to the destination"
     },
     {
-        "name":"taskOne",
-        "content":"Just as you would pass props in react component, add props to all the places to make them appear at the destination"
+        "name":"tasks",
+        "content":"The cats shown in different rooms are imported in their respective components. Start where the cat is imported then pass the props down to destination."
     },
     {
         "name":"taskThree",
