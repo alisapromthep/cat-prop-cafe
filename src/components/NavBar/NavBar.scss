@@ -7,3 +7,12 @@
     align-items: center;
     padding: 2rem 1rem;
 }
+
+.help {
+    &__container{
+        width: 10rem;
+        background-color: white;
+        padding: 1rem;
+    }
+
+}

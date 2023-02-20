@@ -8,7 +8,7 @@ function Tooltip(content) {
         <Popup
         trigger={
             <button type='button' className='tooltip__button'>
-                <FaRegHandPointLeft/>
+                <FaRegHandPointLeft className='tooltip__button'/>
             </button>
         }
         on={['hover']}
