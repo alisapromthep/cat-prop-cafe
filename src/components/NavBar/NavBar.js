@@ -9,7 +9,7 @@ function NavBar() {
         <div className='nav'>
             <img src={paw} alt='cat paw logo' className='cat'/>
             <Popup
-            trigger ={<button type='button'>Hint</button>}
+            trigger ={<button type='button' className='button'>Hint</button>}
             on='click'
             position='left top'>
                 <div className='help__container'>

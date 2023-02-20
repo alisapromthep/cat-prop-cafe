@@ -1,5 +1,7 @@
 @use './styles/partial/typography' as *;
 @use './styles/partial/animations' as *;
+@use './styles/partial/colors' as *;
+
 
 *,::before,::after{
     box-sizing: border-box;
@@ -42,10 +44,9 @@ pre{
     animation: bounce 1s linear infinite;
 }
 
-.confetti{
-    width: 40rem;
-    height: 35rem;
-    border: solid 4px red;
+.button{
+    background-color: white;
+    border: 1px solid $secondaryDark;
 }
 
 .popup {

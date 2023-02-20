@@ -1,5 +1,8 @@
+@use '../../styles/partial/colors' as *;
+
+
 .footer {
-    background-color: #dda15e;
+    background-color: $secondaryDark;
     display: flex;
     flex-direction: column;
 
