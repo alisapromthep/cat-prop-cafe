@@ -4,8 +4,8 @@ import Cafe from '../../components/Cafe/Cafe';
 import Console from '../../components/Console/Console';
 import FlowChart from '../../components/FlowChart/FlowChart';
 import {useGame} from '../../contextProvider/GameContext';
-import ReactCanvasConfetti from 'react-canvas-confetti';
 import Popup from 'reactjs-popup';
+import {MdLiveHelp} from 'react-icons/md';
 
 
 const Game = () => {
@@ -64,6 +64,18 @@ const Game = () => {
                         <Console />
                     </div>
                     <FlowChart className='flowchart--tablet' />
+                    <Popup
+                    trigger={<button type='button' className='hint__button'
+                    >
+                        <MdLiveHelp className='hint__icon'/>
+                    </button>}
+                    on='click'
+                    position='left bottom'
+                    >
+                        <div className='hint__container'>
+                            <p>{task.hint}</p>
+                        </div>
+                    </Popup>
                 </div>
             </div>
         </div>

@@ -5,7 +5,8 @@
         "description":"Genie fell asleep, can you help move her into the first bedroom?",
         "input": "genie",
         "solution":[ "roomOne", "bedroomOne", "bedroomOneImg"],
-        "totalPoints": 3
+        "totalPoints": 3,
+        "hint":"Follow the flowchart from parent to the destination"
     },
     {
         "id":2,
@@ -13,7 +14,8 @@
         "description":"Help get Smokey to the sandbox (litterbox)",
         "input":"smokey",
         "solution": ["roomOne","bedroomTwo", "sandbox", "sandboxImg"],
-        "totalPoints": 4
+        "totalPoints": 4,
+        "hint":"Follow the flowchart from parent to the destination"
     },
     {
         "id":3,
@@ -21,7 +23,8 @@
         "description":"have laptop cat send a msg to the screen in the lobby",
         "input":"sendMessage()",
         "solution": ["onClick"],
-        "totalPoints": 1
+        "totalPoints": 1,
+        "hint":"One way to send information from child component to its parent is by using a call back function"
     },
     {
         "id":4,
@@ -29,6 +32,7 @@
         "description":"Move cat food into FoodArea",
         "input":"catfood",
         "solution": ["roomTwo", "diningTable", "diningTableImg"],
-        "totalPoints": 3
+        "totalPoints": 3,
+        "hint":"Follow the flowchart from parent to the destination"
     }
 ]

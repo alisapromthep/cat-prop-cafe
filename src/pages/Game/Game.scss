@@ -1,5 +1,7 @@
 @use '../../styles/partial/mixins' as *;
 @use '../../styles/partial/typography' as *;
+@use '../../styles/partial/colors' as *;
+
 
 .game{
     display: flex;
@@ -42,5 +44,27 @@
     &__wrong{
         @include popup;
         background-color: rgba(245, 202, 195,1);
+    }
+}
+
+.hint{
+
+    &__button{
+        background-color: transparent;
+        border: none;
+        height: 2rem;
+    }
+
+    &__icon{
+        height: 2rem;
+        font-size:2rem;
+        color: $secondaryDark;
+        
+    }
+    &__container{
+        width: 10rem;
+        background-color: white;
+        padding: 1rem;
+
     }
 }
