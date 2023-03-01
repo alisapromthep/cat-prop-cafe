@@ -1,5 +1,6 @@
 @use '../../styles/partial/mixins' as *;
 
+
 .flowchart{
     width: 50%;
     background: white;
@@ -12,13 +13,7 @@
         height: 2rem;
         border: 1px solid #1A1922;
         cursor: pointer;
-
-        &:hover{
-            box-shadow: 0 0 5px 5px #F7DDD9;
-        }
-        &:active{
-            background-color: #d6ccc2;
-        }
+        @include button-animation;
     }
 
     &__parent{
