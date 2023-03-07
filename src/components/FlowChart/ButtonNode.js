@@ -1,7 +1,6 @@
 import React, {useCallback} from 'react';
 import {Handle, Position} from 'reactflow';
 import './FlowChart.scss';
-import Popup from 'reactjs-popup';
 
 
 

@@ -27,15 +27,14 @@
 }
 
 @mixin button-animation {
-        transition: transform 1s ease-in-out, box-shadow 0.5s ease-in-out;
+        transition: transform 1s ease-in-out;
 
         &:hover{
-            box-shadow: 0 0 5px 5px #F7DDD9;
             transform: scale(1.1);
-        }
-        &:active{
-            background-color: #d6ccc2;
+        } 
 
+        &:active{
+            color: #d6ccc2;
         }
 
 }
