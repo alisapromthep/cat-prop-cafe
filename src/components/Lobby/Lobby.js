@@ -45,7 +45,7 @@ const Lobby = () => {
     ]
     return (
         <section className='lobby'>
-            Lobby
+            <p className='room__name'>Lobby</p>
             <div className='lobby__monitor'>
                 <p className={`lobby__msg ${appearClass('taskThree')}`}><span className= 'lobby__msg--bold'>Simba:</span> "meow hungry! Send food"</p>
             </div>

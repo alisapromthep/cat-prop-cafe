@@ -13,17 +13,19 @@ const Room = () => {
 
     return (
         <section className='room'>
-            <p>RoomOne</p>
+            <div>
+                <p className='room__name'>RoomOne</p>
+            </div>
             <div className='room__container'>
                 <div className='room__bedroom'>
-                    <p>Bedroom One</p>
+                    <p className='room__name'>Bedroom One</p>
                     <Bed imgSrc={sleepcat} alt='sleeping cat' nameClass={`cat ${appearClass('taskOne')}`}/>
                 </div>
                 <div className='room__bedroom'>
-                    <p>Toilet</p>
+                    <p className='room__name'>Toilet</p>
                 <div className='room__sandbox'>
-                    <p>sandbox</p>
                     <img src={greycat} alt='grey cat standing' className={`cat ${appearClass('taskTwo')}`}/>
+                    <p className='room__name'>sandbox</p>
                 </div>
             </div>
             </div>

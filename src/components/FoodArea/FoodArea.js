@@ -38,7 +38,7 @@ const FoodArea = () => {
     ];
     return (
         <div className='foodarea'>
-            <p>RoomTwo</p>
+            <p className='room__name'>RoomTwo</p>
             <div className='foodarea__container'>
                 <div className='foodarea__table'></div>
                 {Foodcats.map((cat,i)=>{
