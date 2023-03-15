@@ -1,3 +1,5 @@
+@use './animations' as *;
+
 @mixin tablet {
     @media (min-width:48rem) {
         @content;
@@ -27,10 +29,9 @@
 }
 
 @mixin button-animation {
-        transition: transform 1s ease-in-out;
 
         &:hover{
-            transform: scale(1.1);
+            animation: pulsing 1.5s linear infinite both;
         } 
 
         &:active{

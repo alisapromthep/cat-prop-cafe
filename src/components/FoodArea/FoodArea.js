@@ -39,15 +39,17 @@ const FoodArea = () => {
     return (
         <div className='foodarea'>
             <p>RoomTwo</p>
-            <div className='foodarea__table'></div>
-            {Foodcats.map((cat,i)=>{
-                return (
-                    <figure key={i} className= {`figure ${cat.class}`}>
-                        <img key={i} src={cat.src} alt={cat.description} className={`cat`}/>
-                        <figcaption>{cat.name}</figcaption>
-                    </figure>
-            )})}
-        </div>
+            <div className='foodarea__container'>
+                <div className='foodarea__table'></div>
+                {Foodcats.map((cat,i)=>{
+                    return (
+                        <figure key={i} className= {`figure ${cat.class}`}>
+                            <img key={i} src={cat.src} alt={cat.description} className={`cat`}/>
+                            <figcaption>{cat.name}</figcaption>
+                        </figure>
+                )})}
+            </div>
+            </div>
     )
 }
 

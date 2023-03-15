@@ -4,6 +4,12 @@
     width: 100%;
     position: relative;
 
+    &__container{
+        position: relative;
+        top:-1rem;
+        left: -3rem;
+    }
+
     &__table{
         width: 8rem;
         height: 8rem;
