@@ -7,11 +7,15 @@ const Footer = () => {
     return (
         <div className='footer'>
             <p>Built with React</p>
-            <Link to='/attributes'>attributes</Link>
+            <Link to='/attributes'>Icons Attributes</Link>
             <div className='footer__bottom-container'>
-                <FaLinkedin/>
-                <FaGithubSquare/>
+                <FaLinkedin className='footer__icons'/>
+                <FaGithubSquare className='footer__icons'/>
             </div>
+            <p>Made with ♡ by <a href='https://alisapromthep.dev'
+            target="_blank"
+            rel="noreferer noopener"
+            >Alisa</a></p>
         </div>
     )
 }
