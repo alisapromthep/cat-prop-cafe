@@ -30,6 +30,16 @@ const Game = () => {
 
     console.log(isMobile)
 
+    if(isMobile){
+        return(
+            <div>
+                <p>
+                    Unfortunately the cafe doesn't fit in a mobile right now.
+                </p>
+            </div>
+        )
+    }
+
 
     if(!task){
         return (<Popup
