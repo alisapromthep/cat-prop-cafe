@@ -10,9 +10,25 @@ import {MdLiveHelp} from 'react-icons/md';
 
 const Game = () => {
 
+    const [isMobile, setIsMobile] = useState(false);
+
+    const handleScreenSize = ()=>{
+        if (window.innerWidth < 768){
+            setIsMobile(true);
+        } else {
+            setIsMobile(false);
+        }
+    }
+
     const {questCorrect, taskId,tasksList, currTask: task, setCurrTask, currScore: score,nextTask, open,setOpen} = useGame();
 
     useEffect(()=>{setCurrTask(tasksList[taskId])}, [taskId])
+
+    useEffect(()=>{
+        window.addEventListener("resize",handleScreenSize);
+    })
+
+    console.log(isMobile)
 
 
     if(!task){
