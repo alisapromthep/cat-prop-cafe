@@ -32,9 +32,9 @@ const Game = () => {
 
     if(isMobile){
         return(
-            <div>
-                <p>
-                    Unfortunately the cafe doesn't fit in a mobile right now.
+            <div className='mobile'>
+                <p className='mobile__message'>
+                    Unfortunately the cafe doesn't fit in a mobile screensize.
                 </p>
             </div>
         )

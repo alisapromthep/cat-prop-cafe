@@ -2,6 +2,17 @@
 @use '../../styles/partial/typography' as *;
 @use '../../styles/partial/colors' as *;
 @use '../../styles/partial/animations' as *;
+.mobile{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__message{
+        background-color: white;
+        padding: 2rem;
+    }
+}
 
 .game{
     display: flex;
