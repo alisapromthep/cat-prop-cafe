@@ -45,7 +45,7 @@ const Game = () => {
         return (<Popup
         open={true}
         >
-            <div><p> That's all! Thank you helping the kitties, hope React Props is more clear to you now!</p></div>
+            <div><p> That's all! Thank you for helping the kitties, hope React Props is more clear to you now!</p></div>
             <button onClick={()=> setOpen(false)}> Back to Home </button>
         </Popup>
         )
@@ -83,7 +83,7 @@ const Game = () => {
                             <div>
                                 <h3>Task {`${task.id}.`}<span> {`${task.description}`}</span></h3>
                                 <p>Total Points: {task.totalPoints}</p>
-                                <p>Input you need to add to the box: {task.input}</p>
+                                <p>Input: {task.input}</p>
                             </div>
                         : <div><p> That's all! Thank you helping the kitties, hope React Props is more clear to you now!</p></div>
                     }

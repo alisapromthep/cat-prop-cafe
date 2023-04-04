@@ -1,11 +1,19 @@
 [
     {
         "id":1,
-        "content":"Just as you would pass props in react component, add props to all the places to make them appear at the destination"
+        "content":"Read the Task description on the left under the cafe. Total Points tells you how many places you'll need to add the prop, and input tells you exactly what you need to pass down as prop.",
+        "position":""
     },
     {
         "id":2,
-        "content":"The cats shown in different rooms are imported in their respective components. Start where the cat is imported then pass the props down to destination."
+        "content":"You'll see a flowchart on the right, where you can click on any component to start. Then the component information (mirroring React component) will appear in the console on the left. You'll also see where the 'cats'/'objects' are imported in."
+    },
+    {
+        "id":3,
+        "content":"There will be input boxes for you to enter the name. Follow the exact spelling and casing as mention at the top."
+    },
+    {
+        "id":4,
+        "content":"Once you add the input, click the next component from the flowchart, once you think you passed down props in all the corret places hit submit"
     }
-
 ]

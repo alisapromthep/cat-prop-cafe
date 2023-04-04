@@ -5,6 +5,7 @@ import creditData from '../../data/attributes.json';
 function Attributes() {
     return (
         <div className='credit-container'>
+            <h1>Credits</h1>
             {
                 creditData.map((credit,i)=>{
                     return (

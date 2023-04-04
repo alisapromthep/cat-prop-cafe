@@ -20,7 +20,7 @@
     {
         "id":3,
         "name": "taskThree",
-        "description":"have laptop cat send a msg to the screen in the lobby",
+        "description":"have laptop cat send a message to the screen in the lobby",
         "input":"sendMessage()",
         "solution": ["onClick"],
         "totalPoints": 1,
@@ -29,7 +29,7 @@
     {
         "id":4,
         "name": "taskFour",
-        "description":"Move cat food into FoodArea",
+        "description":"Cat food got delivered at the lobby front door, help move the cat food into FoodArea",
         "input":"catfood",
         "solution": ["roomTwo", "diningTable", "diningTableImg"],
         "totalPoints": 3,

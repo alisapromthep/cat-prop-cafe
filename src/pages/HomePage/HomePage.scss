@@ -8,6 +8,12 @@
     background-color: white;
     margin: 2rem;
     border: 2px solid $primary;
+
+    &__container {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
     
     &__cafe-name{
         text-align: center;

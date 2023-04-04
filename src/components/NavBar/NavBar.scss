@@ -12,13 +12,26 @@
     @include desktop{
         padding: 2rem 5rem;
     }
+
+    &__tutorial-container{
+        border: 2px solid red;
+        padding: 1rem;
+        width: 50vw;
+        height: 50vh
+
+    }
 }
 
-.help {
-    &__container{
-        width: 10rem;
-        background-color: white;
-        padding: 1rem;
-    }
+.tutorial {
 
+    &__step{
+        padding: 0.5rem;
+
+    }
+}
+
+.modal{
+    &__button{
+        color: red;
+    }
 }
