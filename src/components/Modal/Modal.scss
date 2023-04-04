@@ -1,0 +1,33 @@
+@use '../../styles/partial/colors' as *;
+
+.modal{
+    &__button{
+        background-color: transparent;
+        border: none;
+        height: 2rem;
+
+    }
+    &__close-icon{
+        height: 2rem;
+        font-size:2rem;
+        color: $secondaryDark;
+    }
+
+    &__title{
+        color: $secondaryDark;
+    }
+
+    &__tutorial-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__tutorial {
+        background-color: white;
+        width: 50%;
+        padding: 2rem;
+        border: 4px solid $secondaryDark;
+        display: flex;
+    }
+}

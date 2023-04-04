@@ -1,4 +1,5 @@
 @use '../../styles/partial/mixins' as *;
+@use '../../styles/partial/colors' as *;
 
 .nav {
     height: 2rem;
@@ -9,16 +10,12 @@
     align-items: center;
     padding: 2rem 2rem;
 
-    @include desktop{
-        padding: 2rem 5rem;
-    }
-
-    &__tutorial-container{
-        border: 2px solid red;
-        padding: 1rem;
-        width: 50vw;
-        height: 50vh
-
+    &__button{
+        background-color: $secondaryDark;
+        color: white;
+        font-weight: 800;
+        font-size: 1rem;
+        border-radius: 0.25rem;
     }
 }
 
@@ -27,11 +24,5 @@
     &__step{
         padding: 0.5rem;
 
-    }
-}
-
-.modal{
-    &__button{
-        color: red;
     }
 }
