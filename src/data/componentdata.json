@@ -26,8 +26,8 @@
             "inputName":"bedroomOne"
             },
             {
-                "label":"<bedroomTwo cat=",
-                "inputName":"bedroomTwo"
+                "label":"<toilet cat=",
+                "inputName":"toilet"
                 }],
         "after":"</div>\n)\n}",
         "export":"export default RoomOne;"

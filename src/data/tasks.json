@@ -20,8 +20,8 @@
     {
         "id":3,
         "name": "taskThree",
-        "description":"have laptop cat send a message to the screen in the lobby",
-        "input":"sendMessage()",
+        "description":"have Simba (orange cat using a laptop) send a message to the screen in the lobby",
+        "input":"sendMessage",
         "solution": ["onClick"],
         "totalPoints": 1,
         "hint":"One way to send information from child component to its parent is by using a call back function"
