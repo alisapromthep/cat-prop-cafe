@@ -1,4 +1,5 @@
 @use './animations' as *;
+@use './colors' as *;
 
 @mixin tablet {
     @media (min-width:48rem) {
@@ -26,6 +27,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@mixin button-default {
+    background-color: $primaryDark;
+    color: white;
+    font-weight: 800;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+
 }
 
 @mixin button-animation {

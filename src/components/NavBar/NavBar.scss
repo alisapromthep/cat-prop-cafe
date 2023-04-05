@@ -10,12 +10,12 @@
     align-items: center;
     padding: 2rem 2rem;
 
+    @include desktop{
+        padding: 2rem 4rem;
+    }
+
     &__button{
-        background-color: $secondaryDark;
-        color: white;
-        font-weight: 800;
-        font-size: 1rem;
-        border-radius: 0.25rem;
+        @include button-default;
     }
 }
 

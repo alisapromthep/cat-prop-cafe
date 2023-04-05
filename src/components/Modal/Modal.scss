@@ -10,11 +10,11 @@
     &__close-icon{
         height: 2rem;
         font-size:2rem;
-        color: $secondaryDark;
+        color: $primaryDark;
     }
 
     &__title{
-        color: $secondaryDark;
+        color: $primaryDark;
     }
 
     &__tutorial-container{
@@ -27,7 +27,7 @@
         background-color: white;
         width: 50%;
         padding: 2rem;
-        border: 4px solid $secondaryDark;
+        border: 4px solid $primaryDark;
         display: flex;
     }
 }

@@ -6,6 +6,7 @@ import FlowChart from '../../components/FlowChart/FlowChart';
 import {useGame} from '../../contextProvider/GameContext';
 import Popup from 'reactjs-popup';
 import {MdLiveHelp} from 'react-icons/md';
+import {Link} from 'react-router-dom';
 
 
 const Game = () => {
@@ -42,12 +43,13 @@ const Game = () => {
 
 
     if(!task){
-        return (<Popup
-        open={true}
-        >
-            <div><p> That's all! Thank you for helping the kitties, hope React Props is more clear to you now!</p></div>
-            <button onClick={()=> setOpen(false)}> Back to Home </button>
-        </Popup>
+        return (
+        <div className='endgame'>
+            <p className='endgame__text'> 
+                That's all! Thank you for helping the kitties, hope React Props is more clear to you now!
+            </p>
+            <Link className='button' to='/game'> Back to Home </Link>
+            </div>
         )
     }
 

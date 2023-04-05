@@ -1,5 +1,5 @@
 @use '../../styles/partial/colors' as *;
-
+@use '../../styles/partial/mixins' as *;
 .home{
     display: flex;
     flex-direction: column;
@@ -7,7 +7,11 @@
     align-items: center;
     background-color: white;
     margin: 2rem;
-    border: 2px solid $primary;
+    border: 2px solid $primaryDark;
+
+    @include desktop {
+        margin: 4rem;
+    }
 
     &__container {
         height: 100vh;
@@ -17,7 +21,7 @@
     
     &__cafe-name{
         text-align: center;
-        color: $primary;
+        color: $primaryDark;
         height: 100%;
         margin: 0;
         font-family: 'Pacifico', 'sans-serif';
@@ -28,15 +32,17 @@
         margin: 2rem;
     }
 
+    &__about-text{
+        text-align: center;
+    }
+
     &__start-button{
+        @include button-default;
         font-size: 2rem;
-        color: $primary;
         text-decoration: none;
-        font-family: 'Pacifico', 'sans-serif';
         text-transform: uppercase;
         padding: 0.25rem 1rem;
-        border: 2px solid $primary;
-        border-radius: 2rem;
+
 
     }
 
