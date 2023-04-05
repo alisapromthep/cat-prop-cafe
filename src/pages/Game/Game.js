@@ -6,7 +6,7 @@ import FlowChart from '../../components/FlowChart/FlowChart';
 import {useGame} from '../../contextProvider/GameContext';
 import Popup from 'reactjs-popup';
 import {MdLiveHelp} from 'react-icons/md';
-import {Link} from 'react-router-dom';
+import {Link, Navigate} from 'react-router-dom';
 
 
 const Game = () => {
@@ -29,8 +29,6 @@ const Game = () => {
         window.addEventListener("resize",handleScreenSize);
     })
 
-    console.log(isMobile)
-
     if(isMobile){
         return(
             <div className='mobile'>
@@ -44,12 +42,7 @@ const Game = () => {
 
     if(!task){
         return (
-        <div className='endgame'>
-            <p className='endgame__text'> 
-                That's all! Thank you for helping the kitties, hope React Props is more clear to you now!
-            </p>
-            <Link className='button' to='/game'> Back to Home </Link>
-            </div>
+            <Navigate to="/endgame"/>
         )
     }
 

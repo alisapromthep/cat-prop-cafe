@@ -7,6 +7,7 @@
         align-items: center;
         margin: 1rem;
         background-color: white;
+        height: 100%;
     }
     
     &__title{
@@ -18,13 +19,18 @@
         font-size: 4rem;
     }
 
-    &__rightbox{
+    &__left{
+        width: 60%;
+    }
+
+    &__right{
         margin: 2rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 100%;
+        width: 40%;
     }
 
     &__textbox{
@@ -36,6 +42,7 @@
 
     &__text{
         text-align: center;
+        padding: 2rem 0;
     }
 
     &__cat-container{
@@ -52,4 +59,5 @@
     text-decoration: none;
     text-transform: uppercase;
     padding: 0.25rem 1rem;
+    margin: 1rem 0;
 }
