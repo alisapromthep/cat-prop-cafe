@@ -12,8 +12,20 @@ const Footer = () => {
             </div>
             <div className='footer__right'>
                 <div className='footer__icons-container'>
+                <a href="https://www.linkedin.com/in/alisa-promthep/"
+                target="_blank"
+                rel="noreferrer"
+                className='footer__link'>
                     <FaLinkedin className='footer__icons'/>
+                </a>
+                <a 
+                href="https://github.com/alisapromthep"
+                target="_blank"
+                rel="noreferrer"
+                className='footer__link'
+                >
                     <FaGithubSquare className='footer__icons'/>
+                </a>
                 </div>
                 <p>Made with ♡ by <a href='https://alisapromthep.dev'
                 target='_blank'

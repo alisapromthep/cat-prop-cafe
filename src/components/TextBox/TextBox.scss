@@ -1,5 +1,5 @@
-@use '../../styles/partial/colors' as *;
 @use '../../styles/partial/mixins' as *;
+
 .container{
 
     &__context {
@@ -14,7 +14,6 @@
     
     &__title{
         text-align: center;
-        color: $primaryDark;
         margin: 0;
         font-family: 'Pacifico', 'sans-serif';
         font-size: 4rem;

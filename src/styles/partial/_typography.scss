@@ -1,3 +1,4 @@
+@use '../partial/colors' as *;
 
 @font-face {
     font-family: 'Pacifico';
@@ -10,6 +11,7 @@
 
 h1,h2{
     font-family: 'Pacifico', 'sans-serif';
+    color: $primaryDark;
 }
 
 p {
