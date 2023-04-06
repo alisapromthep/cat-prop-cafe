@@ -8,6 +8,11 @@
         margin: 1rem;
         background-color: white;
         height: 100%;
+
+        @include large-desktop{
+            flex-direction: column;
+            justify-content: center;
+        }
     }
     
     &__title{
@@ -31,6 +36,10 @@
         align-items: center;
         height: 100%;
         width: 40%;
+
+        @include large-desktop{
+            height: unset;
+        }
     }
 
     &__textbox{
