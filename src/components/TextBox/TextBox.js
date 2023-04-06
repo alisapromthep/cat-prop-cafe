@@ -6,7 +6,7 @@ import orangecat from '../../assets/icons/orangecat.png';
 import stretchcat from '../../assets/icons/stretchcat.png';
 
 
-function TextBox({title, text, linkTo, linkText, buttonClass}) {
+function TextBox({title, content, text, linkTo, linkText, buttonClass}) {
 
     const cats = [
         {
@@ -34,6 +34,7 @@ function TextBox({title, text, linkTo, linkText, buttonClass}) {
             </h1>
             <div className='container__right'>
                 <div className='container__textbox'>
+                    {content}
                     <p className='container__text'>
                         {text}
                     </p>

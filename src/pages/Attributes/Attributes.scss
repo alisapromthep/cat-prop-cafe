@@ -1,11 +1,10 @@
-.credit {
+.credits {
+    height: 100vh;
+    margin: 1rem;
 
-    &-container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+    &__links{
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: black;
     }
-
 }
