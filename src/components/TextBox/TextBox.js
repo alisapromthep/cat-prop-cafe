@@ -30,9 +30,8 @@ function TextBox({title, text, linkTo, linkText, buttonClass}) {
 
     return (
         <div className='container__context'>
-            <div className='container__left'>
-                <h1 className='container__title'>{title}</h1>
-            </div>
+            <h1 className='container__title'>{title}
+            </h1>
             <div className='container__right'>
                 <div className='container__textbox'>
                     <p className='container__text'>

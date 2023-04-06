@@ -4,11 +4,7 @@
 
 .endgame {
     height: 100vh;
-
-    @include large-desktop{
-        width: 100%;
-        margin: 1rem;
-    }
+    margin: 1rem;
 
     &__back-button{
         font-size: 1.5rem;

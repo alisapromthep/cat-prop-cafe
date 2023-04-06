@@ -12,7 +12,7 @@ function EndGame() {
             title="Thank you for helping the kitties!"
             text={text}
             linkTo="/game"
-            linkText="Back to the Cafe"
+            linkText="to cafe"
             buttonClass="endgame__back-button"
             />
         </div>
