@@ -1,0 +1,12 @@
+@use '../../styles/partial/mixins' as *;
+@use '../../styles/partial/colors' as *;
+
+
+.endgame {
+    height: 100vh;
+
+    &__back-button{
+        font-size: 1.5rem;
+    }
+}
+

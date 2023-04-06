@@ -6,7 +6,7 @@ import orangecat from '../../assets/icons/orangecat.png';
 import stretchcat from '../../assets/icons/stretchcat.png';
 
 
-function TextBox({title, text, linkTo, linkText}) {
+function TextBox({title, text, linkTo, linkText, buttonClass}) {
 
     const cats = [
         {
@@ -38,7 +38,7 @@ function TextBox({title, text, linkTo, linkText}) {
                     <p className='container__text'>
                         {text}
                     </p>
-                    <Link to={linkTo} className='link'> 
+                    <Link to={linkTo} className={`link ${buttonClass}`}> 
                         {linkText}
                     </Link>
                 </div>
