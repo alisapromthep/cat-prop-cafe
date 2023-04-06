@@ -10,10 +10,14 @@
     },
     {
         "id":3,
-        "content":"There will be input boxes for you to enter the name. Follow the exact spelling and casing as mention at the top."
+        "content":"There will be input boxes for you to enter the name. Follow the exact spelling and casing as mention at the top. Enter the input in all the places you would pass the prop down, and also where you would use the prop (for example <img src={INPUT}/>)"
     },
     {
         "id":4,
         "content":"Once you add the input, click the next component from the flowchart, once you think you passed down props in all the corret places hit submit"
+    },
+    {
+        "id":5,
+        "content":"Only hit submit at the end."
     }
 ]
