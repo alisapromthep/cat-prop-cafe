@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer';
 import { GameProvider } from './contextProvider/GameContext';
 import { BrowserRouter,Routes,Route  } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/game" element={<Game/>}/>
           <Route path="/endgame" element={<EndGame/>}/>
           <Route path="/attributes" element={<Attributes/>}/>
+          <Route path="*" element={<NotFoundPage/>}/>
         </Routes>
         </GameProvider>
         <Footer/>

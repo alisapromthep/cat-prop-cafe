@@ -1,0 +1,29 @@
+@use '../../styles/partial/mixins' as *;
+
+
+.notfound{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+
+    &__title{
+        color: red;
+        font-size: 5rem;
+        font-weight: 800;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__text{
+        font-size: 1.5rem;
+    }
+
+    &__link{
+        @include button-default;
+        text-decoration: none;
+        padding: 0.5rem;
+        margin: 1rem;
+    }
+
+}
