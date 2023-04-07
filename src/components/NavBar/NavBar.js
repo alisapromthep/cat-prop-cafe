@@ -20,9 +20,11 @@ function NavBar() {
             });
 
         const aboutReactProps = aboutProps.map((info,i)=>{
-            <p key={i} className='tutorial__step'>
-                {info}
-            </p>
+            return (
+                <p key={i} className='tutorial__step'>
+                    {info.content}
+                </p>
+            )
         })
 
 
