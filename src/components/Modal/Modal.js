@@ -3,14 +3,16 @@ import Popup from 'reactjs-popup';
 import tutorial from '../../data/tutorial.json';
 import {FaWindowClose} from 'react-icons/fa';
 import './Modal.scss';
-const Modal = () => {
+
+
+const Modal = ({buttonName, content}) => {
 
     return (
         <Popup
         trigger={<button
             type='button'
             className='nav__button button'>
-                Tutorial
+                {buttonName}
         </button>}
         modal
         nested
@@ -20,18 +22,8 @@ const Modal = () => {
                 <div className='modal__tutorial-container'>
                     <div className='modal__tutorial'>
                     <div>
-                        <h1 className='modal__title'>Tutorial</h1>
-                        {
-                            tutorial.map((step)=>{
-                                return (
-                                    <p key={step.id}
-                                    className='tutorial__step'>
-                                        {step.id}.
-                                        {step.content}
-                                    </p>
-                                )
-                            })
-                        }
+                        <h1 className='modal__title'>{buttonName}</h1>
+                        {content}
                     </div>
                     <button className='modal__button'>
                         <FaWindowClose className='modal__close-icon' onClick={close}/>
