@@ -24,11 +24,11 @@ const initialAnswer =
     roomOne: "",
     roomTwo: "",
     bedroomOne: "",
-    bedroomTwo:"",
+    toilet:"",
     diningTable:"",
     onClick:"",
     bedroomOneImg:"",
-    bedroomTwoImg:"",
+    toiletImg:"",
     sandbox: "",
     sandboxImg:"",
     diningTableImg:""
@@ -66,12 +66,24 @@ export function GameProvider({children}){
 
     function nextTask(){
         setTaskId(prev => prev+1);
+        setAnswer(initialAnswer);
         setOpen(false)
         return taskId;
     }
 
+    function resetGame(){
+        setQuestCorrect(initialGameState);
+        setCurrScore(initialScore);
+        setAnswer(initialAnswer);
+        setCode(`Select a component from the flowchart to get started.`);
+        setComponentId(null);
+        setTaskId(0);
+        setCurrTask(tasksList[0]);
+        setOpen(false);
+    }
+
     function handleAnswerSubmit(event){
-        event.preventDefault();
+        if (event) event.preventDefault();
 
         const correctInput = currTask.input;
         const solution = currTask.solution;
@@ -145,7 +157,7 @@ export function GameProvider({children}){
             currTask, setCurrTask,
             currScore, setCurrScore,
             open,setOpen,
-            displayCode, handleAnswerSubmit, appearClass, disappearClass,nextTask})}>
+            displayCode, handleAnswerSubmit, appearClass, disappearClass,nextTask, resetGame})}>
             {children}
         </GameContext.Provider>
     )

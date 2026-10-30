@@ -4,7 +4,7 @@ import {useGame} from '../../contextProvider/GameContext';
 
 const Console = () => {
 
-    const {code, componentId, updateInput, answer, handleAnswerSubmit} = useGame();
+    const {code, componentId, updateInput, answer} = useGame();
 
     const lineNum = [];
     for (let i = 1; i<=20; i++){
@@ -23,7 +23,7 @@ const Console = () => {
                 <pre className='code__import'>{code.import}</pre>
                 <pre>{code.before}</pre>
                 {componentId ? 
-                <form className='code__input' onSubmit={handleAnswerSubmit}>
+                <form className='code__input' onSubmit={(event)=>event.preventDefault()}>
                     {roomComponents.map((comp,i)=> {
                         return <label key={i}>
                             {comp.label} 
@@ -38,9 +38,7 @@ const Console = () => {
                     })}
                     <pre>{code.after}</pre>
                     <pre>{code.export}</pre>
-                    <div className='code__button-container'>
-                        <button type='submit' className='code__button'>Submit</button>
-                    </div>
+                    <p className='code__note'>Your answers are saved as you switch components. Submit the task when the whole path is done.</p>
                 </form>
                 : <p>{code}</p>
                 }

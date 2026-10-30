@@ -2,7 +2,7 @@ import React from 'react';
 import './Lobby.scss';
 import readingcat from '../../assets/icons/readingcat.png';
 import greycat from '../../assets/icons/greycat.png';
-import catfood from '../../assets/icons/cat-food.png';
+import catFood from '../../assets/icons/cat-food.png';
 import stretchcat from '../../assets/icons/stretchcat.png';
 import sleepcat from '../../assets/icons/sleepcat.png';
 import {useGame} from '../../contextProvider/GameContext';
@@ -12,7 +12,7 @@ const Lobby = () => {
 
     const cats = [
         {
-            src: catfood,
+            src: catFood,
             class: `lobby__catfood ${disappearClass('taskFour')}`,
             description:'a bag of cat food',
             name: 'Cat Food'

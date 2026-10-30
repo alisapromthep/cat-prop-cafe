@@ -109,3 +109,26 @@
         text-align: center;
     }
 }
+
+.submit {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+
+    &__count{
+        font-weight: bold;
+    }
+
+    &__confirm{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    &__button{
+        padding: 0.25rem 0.75rem;
+    }
+}

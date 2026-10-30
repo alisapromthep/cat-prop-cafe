@@ -6,11 +6,11 @@
         "before":"const Lobby = () => {\nfunction sendMessage(){\nreturn simba's message\n}\nreturn (\n<div> ",
         "components":[
             {
-                "label":"<RoomOne cat=",
+                "label":"<RoomOne item=",
                 "inputName":"roomOne"
             },
             {
-                "label":"<RoomTwo sendMessage={sendMessage} cat=",
+                "label":"<RoomTwo sendMessage={sendMessage} item=",
                 "inputName":"roomTwo"
             }
     ], 
@@ -20,13 +20,13 @@
     {
         "id":"1",
         "name":"roomOne",
-        "before":"const RoomOne = ({cat}) => {\nreturn (\n<div>",
+        "before":"const RoomOne = ({item}) => {\nreturn (\n<div>",
         "components":[{
-            "label":"<BedroomOne cat=",
+            "label":"<BedroomOne item=",
             "inputName":"bedroomOne"
             },
             {
-                "label":"<Toilet cat=",
+                "label":"<Toilet item=",
                 "inputName":"toilet"
                 }],
         "after":"</div>\n)\n}",
@@ -36,9 +36,9 @@
         "id":"2",
         "name":"roomTwo",
         "import":"import simba from '../../assets/image/laptopcat.png'",
-        "before":"const RoomTwo = ({cat,sendMessage}) => {\nreturn (\n<div>",
+        "before":"const RoomTwo = ({item,sendMessage}) => {\nreturn (\n<div>",
         "components":[{
-            "label":"<DiningTable cat=",
+            "label":"<DiningTable item=",
             "inputName":"diningTable"
         },
         {
@@ -50,34 +50,34 @@
     {
         "id":"3",
         "name":"bedroomOne",
-        "before":"const BedroomOne = ({cat}) => {\nreturn (\n<div className='bed'>",
+        "before":"const BedroomOne = ({item}) => {\nreturn (\n<div className='bed'>",
         "components":[{
-            "label":"<img cat={catName}",
+            "label":"<img src=",
             "inputName":"bedroomOneImg"}],
         "after":"</div>\n)\n}",
         "export":"export default BedroomOne;"
     },
     {
         "id":"4",
-        "name":"bedroomTwo",
-        "before":"const BedroomTwo = ({cat}) => {\nreturn (\n<div className='bed'>",
+        "name":"toilet",
+        "before":"const Toilet = ({item}) => {\nreturn (\n<div className='toilet'>",
         "components":[{
-            "label":"<img cat={catName}",
-            "inputName":"bedroomTwoImg"
+            "label":"<img src=",
+            "inputName":"toiletImg"
         },
         {
-            "label":"<Sandbox cat=",
+            "label":"<Sandbox item=",
             "inputName":"sandbox"
             }],
         "after":"</div>\n)\n}",
-        "export":"export default BedroomTwo;"
+        "export":"export default Toilet;"
     },
     {
         "id":"5",
         "name":"sandbox",
-        "before":"const Sandbox = ({cat}) => {\nreturn (\n<div className='sandbox'>",
+        "before":"const Sandbox = ({item}) => {\nreturn (\n<div className='sandbox'>",
         "components":[{
-            "label":"<img cat=",
+            "label":"<img src=",
             "inputName":"sandboxImg"
         }],
         "after":"</div>\n)\n}",
@@ -86,7 +86,7 @@
     {
         "id":"6",
         "name":"DiningTable",
-        "before":"const DiningTable = ({cat}) => {\nreturn (\n<div>\n<div className='table' cat={catName}>",
+        "before":"const DiningTable = ({item}) => {\nreturn (\n<div>\n<div className='table'>",
         "components":[{
             "label":"<img src=",
             "inputName":"diningTableImg"

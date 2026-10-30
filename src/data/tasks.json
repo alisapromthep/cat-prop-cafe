@@ -13,7 +13,7 @@
         "name": "taskTwo",
         "description":"Help get Smokey to the sandbox (litter box).",
         "input":"smokey",
-        "solution": ["roomOne","bedroomTwo", "sandbox", "sandboxImg"],
+        "solution": ["roomOne","toilet", "sandbox", "sandboxImg"],
         "totalPoints": 4,
         "hint":"Follow the flowchart from the parent to the destination."
     },
@@ -29,8 +29,8 @@
     {
         "id":4,
         "name": "taskFour",
-        "description":"Cat food was delivered to the lobby's front door. Help move the cat food into the FoodArea.",
-        "input":"catfood",
+        "description":"Cat food was delivered to the lobby's front door. Help move the cat food onto the DiningTable in RoomTwo.",
+        "input":"catFood",
         "solution": ["roomTwo", "diningTable", "diningTableImg"],
         "totalPoints": 3,
         "hint":"Follow the flowchart from the parent to the destination."

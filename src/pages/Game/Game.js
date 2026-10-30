@@ -21,9 +21,14 @@ const Game = () => {
         }
     }
 
-    const {questCorrect, taskId,tasksList, currTask: task, setCurrTask, currScore: score,nextTask, open,setOpen} = useGame();
+    const [confirmSubmit, setConfirmSubmit] = useState(false);
 
-    useEffect(()=>{setCurrTask(tasksList[taskId])}, [taskId])
+    const {questCorrect, taskId,tasksList, currTask: task, setCurrTask, currScore: score,nextTask, open,setOpen, answer, handleAnswerSubmit} = useGame();
+
+    useEffect(()=>{
+        setCurrTask(tasksList[taskId]);
+        setConfirmSubmit(false);
+    }, [taskId])
 
     useEffect(()=>{
         window.addEventListener("resize",handleScreenSize);
@@ -44,6 +49,21 @@ const Game = () => {
         return (
             <Navigate to="/endgame"/>
         )
+    }
+
+    const filledCount = Object.values(answer).filter(value => value.trim() !== '').length;
+
+    const handleTaskSubmit = ()=>{
+        if (filledCount < task.totalPoints){
+            setConfirmSubmit(true);
+        } else {
+            handleAnswerSubmit();
+        }
+    }
+
+    const handleConfirmSubmit = ()=>{
+        setConfirmSubmit(false);
+        handleAnswerSubmit();
     }
 
     return (
@@ -79,6 +99,17 @@ const Game = () => {
                                 <h3>Task {`${task.id}.`}<span> {`${task.description}`}</span></h3>
                                 <p>Total Points: {task.totalPoints}</p>
                                 <p>Input: {task.input}</p>
+                                <div className='submit'>
+                                    <p className='submit__count'>{`This task needs ${task.totalPoints} ${task.totalPoints === 1 ? 'input' : 'inputs'} · you've filled ${filledCount}`}</p>
+                                    {confirmSubmit ?
+                                        <div className='submit__confirm'>
+                                            <p>{`You've only filled ${filledCount} of ${task.totalPoints} inputs. Submit anyway?`}</p>
+                                            <button type='button' className='submit__button' onClick={handleConfirmSubmit}>Submit anyway</button>
+                                            <button type='button' className='submit__button' onClick={()=>setConfirmSubmit(false)}>Keep editing</button>
+                                        </div>
+                                    : <button type='button' className='submit__button' onClick={handleTaskSubmit}>{`Submit Task ${task.id}`}</button>
+                                    }
+                                </div>
                             </div>
                         : <div><p> That's all! Thank you for helping the kitties. We hope React props are clearer to you now!</p></div>
                     }

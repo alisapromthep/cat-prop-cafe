@@ -3,7 +3,7 @@ import './FoodArea.scss';
 //import orangecat from '../../assets/icons/orangecat.png';
 import eatcat from '../../assets/icons/eatcat.png';
 import laptopcat from '../../assets/icons/laptopcat.png';
-import catfood from '../../assets/icons/cat-food.png';
+import catFood from '../../assets/icons/cat-food.png';
 import {useGame} from '../../contextProvider/GameContext';
 
 const FoodArea = () => {
@@ -30,7 +30,7 @@ const FoodArea = () => {
             name:'Simba'
         },
         {
-            src: catfood,
+            src: catFood,
             class: `foodarea__catfood ${appearClass('taskFour')}`,
             description:'a bag of cat food',
             name: 'Catfood'

@@ -21,7 +21,7 @@ const Room = () => {
                     <p className='room__name'>Bedroom One</p>
                     <Bed imgSrc={sleepcat} alt='sleeping cat' nameClass={`cat ${appearClass('taskOne')}`}/>
                 </div>
-                <div className='room__bedroom'>
+                <div className='room__toilet'>
                     <p className='room__name'>Toilet</p>
                 <div className='room__sandbox'>
                     <img src={greycat} alt='grey cat standing' className={`cat ${appearClass('taskTwo')}`}/>

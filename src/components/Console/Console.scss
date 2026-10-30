@@ -37,14 +37,9 @@
         width: 20rem;
     }
 
-    &__button-container {
-        display: flex;
-        justify-content: flex-end;
-        padding-right: 1rem;
-    }
-
-    &__button{
-        width: 4rem;
-        margin: 0.5rem;
+    &__note{
+        margin-top: 1rem;
+        font-style: italic;
+        color: grey;
     }
 }
