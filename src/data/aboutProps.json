@@ -1,20 +1,20 @@
 [
     {
         "id":1,
-        "content":"Props are ways parents component can communicate with their children. They are like little packages or letters that stores information or even little machine(functions) to be pass down to the child component."
+        "content":"Props are how parent components communicate with their children. They are like little packages or letters that store information, or even little machines (functions), to be passed down to the child component."
 
     }, 
     {
         "id":2,
-        "content":"Props can be any kind of javascript values including arrays, objects and functions."
+        "content":"Props can be any kind of JavaScript value, including arrays, objects, and functions."
     },
 
     {
         "id":3,
-        "content":"Think of this cafe as your entire react app, and the lobby is the App.js, or the parent and each rooms are the children components."
+        "content":"Think of this cafe as your entire React app: the lobby is App.js (the parent), and each room is a child component."
     },
     {
         "id":4,
-        "content":"The cafe only has the front door (you entering in App.js) to enter. Each rooms can only be enter via the lobby, and there is no door between the two rooms. (the same way two children component cannot communicate without going through the parent.)"
+        "content":"The cafe has only one entrance: the front door (you entering through App.js). Each room can only be entered through the lobby, and there is no door between the two rooms (the same way two child components cannot communicate without going through their parent)."
     }
 ]
