@@ -25,7 +25,7 @@ const Room = () => {
                     <p className='room__name'>Toilet</p>
                 <div className='room__sandbox'>
                     <img src={greycat} alt='grey cat standing' className={`cat ${appearClass('taskTwo')}`}/>
-                    <p className='room__name'>sandbox</p>
+                    <p className='room__name'>Sandbox</p>
                 </div>
             </div>
             </div>

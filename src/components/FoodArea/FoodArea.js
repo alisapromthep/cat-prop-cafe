@@ -20,7 +20,7 @@ const FoodArea = () => {
         {
             src: eatcat,
             class: 'foodarea__eatcat',
-            description:'cat eating fisht',
+            description:'cat eating fish',
             name:'Tigger'
         },
         {

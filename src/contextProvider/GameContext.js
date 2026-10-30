@@ -43,7 +43,7 @@ export function GameProvider({children}){
 
     const [answer, setAnswer] = useState(initialAnswer);
 
-    const [code, setCode] = useState(`Select the component from the flowchart to get start`);
+    const [code, setCode] = useState(`Select a component from the flowchart to get started.`);
 
     const [componentId, setComponentId] = useState(null)
 

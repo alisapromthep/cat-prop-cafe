@@ -14,7 +14,7 @@ const Lobby = () => {
         {
             src: catfood,
             class: `lobby__catfood ${disappearClass('taskFour')}`,
-            description:'bag of catfood',
+            description:'a bag of cat food',
             name: 'Cat Food'
         },
         {
@@ -52,7 +52,7 @@ const Lobby = () => {
             {cats.map(((cat,i)=>{
                 return ( 
                 <figure key={i} className={`figure ${cat.class}`}>
-                    <img src={cat.src} className='cat' alt={`${cat.description} and the name is ${cat.name}`}/>
+                    <img src={cat.src} className='cat' alt={`${cat.description} named ${cat.name}`}/>
                     <figcaption>{cat.name}</figcaption>
                 </figure>
                 )

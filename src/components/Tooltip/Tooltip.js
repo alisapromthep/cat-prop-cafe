@@ -14,7 +14,7 @@ function Tooltip(content) {
         on={['hover']}
         position='right top'
         closeOnDocumentClick>
-            <span>click the component</span>
+            <span>Click the component</span>
         </Popup>
     )
 }

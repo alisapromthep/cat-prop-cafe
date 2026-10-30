@@ -4,7 +4,7 @@ import TextBox from '../../components/TextBox/TextBox.js';
 
 function EndGame() {
 
-    const text = "That's all! Thank you for helping the kitties, hope React Props is more clear to you now!";
+    const text = "That's all! Thank you for helping the kitties. We hope React props are clearer to you now!";
 
     return (
         <div className='endgame'>

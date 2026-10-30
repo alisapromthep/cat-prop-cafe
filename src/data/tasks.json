@@ -2,37 +2,37 @@
     {
         "id":1,
         "name": "taskOne",
-        "description":"Genie fell asleep, can you help move her into the first bedroom?",
+        "description":"Genie fell asleep. Can you help move her into the first bedroom?",
         "input": "genie",
         "solution":[ "roomOne", "bedroomOne", "bedroomOneImg"],
         "totalPoints": 3,
-        "hint":"Follow the flowchart from parent to the destination"
+        "hint":"Follow the flowchart from the parent to the destination."
     },
     {
         "id":2,
         "name": "taskTwo",
-        "description":"Help get Smokey to the sandbox (litterbox)",
+        "description":"Help get Smokey to the sandbox (litter box).",
         "input":"smokey",
         "solution": ["roomOne","bedroomTwo", "sandbox", "sandboxImg"],
         "totalPoints": 4,
-        "hint":"Follow the flowchart from parent to the destination"
+        "hint":"Follow the flowchart from the parent to the destination."
     },
     {
         "id":3,
         "name": "taskThree",
-        "description":"have Simba (orange cat using a laptop) send a message to the screen in the lobby",
+        "description":"Have Simba (the orange cat using a laptop) send a message to the screen in the lobby.",
         "input":"sendMessage",
         "solution": ["onClick"],
         "totalPoints": 1,
-        "hint":"One way to send information from child component to its parent is by using a call back function"
+        "hint":"One way to send information from a child component to its parent is by using a callback function."
     },
     {
         "id":4,
         "name": "taskFour",
-        "description":"Cat food got delivered at the lobby front door, help move the cat food into FoodArea",
+        "description":"Cat food was delivered to the lobby's front door. Help move the cat food into the FoodArea.",
         "input":"catfood",
         "solution": ["roomTwo", "diningTable", "diningTableImg"],
         "totalPoints": 3,
-        "hint":"Follow the flowchart from parent to the destination"
+        "hint":"Follow the flowchart from the parent to the destination."
     }
 ]

@@ -18,7 +18,7 @@ function Attributes() {
     return (
         <div className='credits'>
             <TextBox
-            title="Icons Credits"
+            title="Icon Credits"
             content={content}
             linkTo="/"
             linkText="home"

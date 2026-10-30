@@ -33,7 +33,7 @@ const Game = () => {
         return(
             <div className='mobile'>
                 <p className='mobile__message'>
-                    Unfortunately the cafe doesn't fit in a mobile screensize.
+                    Unfortunately, the cafe doesn't fit on a mobile screen.
                 </p>
             </div>
         )
@@ -57,11 +57,11 @@ const Game = () => {
                 {questCorrect[task.name] ? 
                     <div className='popup__right'>
                         <p>Correct!</p>
-                        <button className='popup__button' type='button' onClick={nextTask}>next</button>
+                        <button className='popup__button' type='button' onClick={nextTask}>Next</button>
                     </div> :
                     <div className='popup__wrong'>
-                        <p> {`${score[task.name]}/${task.totalPoints} points, 
-                        you may have missed a step somewhere, the cat is not where it needs to be`}</p>
+                        <p> {`${score[task.name]}/${task.totalPoints} points. 
+                        You may have missed a step somewhere; the cat isn't where it needs to be.`}</p>
                         <button className='popup__button' type='button' onClick={()=>{setOpen(false)}}>Keep trying</button>
                         <button className='popup__button' type='button' onClick={nextTask}>Skip</button>
                     </div>
@@ -80,7 +80,7 @@ const Game = () => {
                                 <p>Total Points: {task.totalPoints}</p>
                                 <p>Input: {task.input}</p>
                             </div>
-                        : <div><p> That's all! Thank you helping the kitties, hope React Props is more clear to you now!</p></div>
+                        : <div><p> That's all! Thank you for helping the kitties. We hope React props are clearer to you now!</p></div>
                     }
                         <Console />
                     </div>

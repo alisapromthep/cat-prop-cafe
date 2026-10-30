@@ -8,7 +8,7 @@ const Footer = () => {
         <div className='footer'>
             <div className='footer__left'>
                 <p>Built with React</p>
-                <Link className='footer__link' to='/attributes'>Icons Attributes</Link>
+                <Link className='footer__link' to='/attributes'>Icon Credits</Link>
             </div>
             <div className='footer__right'>
                 <div className='footer__icons-container'>
@@ -29,7 +29,7 @@ const Footer = () => {
                 </div>
                 <p>Made with ♡ by <a href='https://alisapromthep.dev'
                 target='_blank'
-                rel='noreferer noopener'
+                rel='noreferrer noopener'
                 className='footer__link'
                 >Alisa</a></p>
             </div>

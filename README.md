@@ -1,7 +1,7 @@
 
 # Cat Prop Cafe
 
-Cat Prop Cafe, is a gamify learning tool for learning React Prop. Personally, props was confusing when I first started, but with the help of flow charts it really helped put things in perspective for me. I wanted to create this to not only visualize react components as rooms in a cafe, but also using cats as props that can go from one room to another. (following some rules of course)
+Cat Prop Cafe is a gamified tool for learning React props. Props were confusing to me when I first started, but flow charts really helped put things in perspective. I wanted to create something that not only visualizes React components as rooms in a cafe, but also uses cats as props that can move from one room to another (following some rules, of course).
 
 
 
@@ -12,14 +12,14 @@ Cat Prop Cafe, is a gamify learning tool for learning React Prop. Personally, pr
 
 ## Features
 
-- 4 different tasks to help clarify how props gets pass around. 
-- clickable flow chart 
+- 4 different tasks to help clarify how props get passed around
+- Clickable flow chart
 
 
 
 ## Tech Stack
 
-**Client:** React, React Hooks, React Flow, React-popup
+**Client:** React, React Hooks, React Flow, reactjs-popup
 
 
 ## Run Locally
@@ -51,5 +51,5 @@ Start the server
 
 ## Demo
 
-[Click here to visit site](https://cat-prop-cafe.netlify.app/)
+[Click here to visit the site](https://cat-prop-cafe.netlify.app/)
 
